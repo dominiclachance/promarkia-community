@@ -184,6 +184,8 @@ def enrich_sbom(path: Path, inventory: list[dict[str, object]]) -> None:
         item = by_name.get(canonical(str(component.get("name", ""))))
         if not item:
             continue
+        component["name"] = item["name"]
+        component["version"] = item["version"]
         component["purl"] = item["purl"]
         component["licenses"] = [{"expression": item["license"]}]
         if item["homepage"]:

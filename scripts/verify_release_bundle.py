@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 
@@ -21,9 +22,14 @@ def canonical(name: str) -> str:
 
 def find_one(root: Path, name: str) -> Path:
     matches = [path for path in root.rglob(name) if path.is_file()]
-    if len(matches) != 1:
-        raise SystemExit(f"Expected exactly one {name} in {root}; found {len(matches)}")
-    return matches[0]
+    if not matches:
+        raise SystemExit(f"Expected at least one {name} in {root}; found none")
+    digests = {hashlib.sha256(path.read_bytes()).hexdigest() for path in matches}
+    if len(digests) != 1:
+        raise SystemExit(f"Conflicting copies of {name} in {root}; found {len(matches)}")
+    # PyInstaller macOS bundles can expose the same resource through both its
+    # canonical location and a Frameworks symlink. Audit the canonical copy.
+    return min(matches, key=lambda path: (len(path.parts), str(path)))
 
 
 def component_map(document: dict) -> dict[tuple[str, str], dict]:
