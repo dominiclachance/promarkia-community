@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LICENSE_DIR = ROOT / "THIRD_PARTY_LICENSES"
 OPENSSL_LICENSE_URL = "https://raw.githubusercontent.com/openssl/openssl/openssl-3.0.15/LICENSE.txt"
 OPENSSL_LICENSE_SHA256 = "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+CPYTHON_LICENSE_SHA256 = "62bec384df47b0328307db41455ff6ea2559e5546b394ac69148561b21703120"
 
 LICENSES = {
     "altgraph": "MIT",
@@ -61,6 +62,13 @@ def locked_distribution_names() -> set[str]:
 
 
 def copy_distribution_licenses() -> list[dict[str, object]]:
+    # setup-python images do not consistently install CPython's LICENSE.txt.
+    # Preserve the reviewed, hash-pinned copies before regenerating the tree.
+    vendored_platform_licenses = {}
+    for name in ("CPYTHON-LICENSE.txt", "OPENSSL-LICENSE.txt"):
+        path = LICENSE_DIR / name
+        if path.is_file():
+            vendored_platform_licenses[name] = path.read_bytes()
     if LICENSE_DIR.exists():
         shutil.rmtree(LICENSE_DIR)
     LICENSE_DIR.mkdir(parents=True)
@@ -101,18 +109,35 @@ def copy_distribution_licenses() -> list[dict[str, object]]:
             "licenseFiles": copied,
         })
 
-    python_license = Path(sys.base_prefix) / "LICENSE.txt"
-    if not python_license.is_file():
-        raise RuntimeError(f"CPython license not found at {python_license}")
-    shutil.copyfile(python_license, LICENSE_DIR / "CPYTHON-LICENSE.txt")
+    python_license = next(
+        (candidate for candidate in (
+            Path(sys.base_prefix) / "LICENSE.txt",
+            Path(sys.base_prefix) / "LICENSE",
+            Path(sys.executable).resolve().parent.parent / "LICENSE.txt",
+        ) if candidate.is_file()),
+        None,
+    )
+    python_license_bytes = (
+        python_license.read_bytes()
+        if python_license
+        else vendored_platform_licenses.get("CPYTHON-LICENSE.txt", b"")
+    )
+    if hashlib.sha256(python_license_bytes).hexdigest() != CPYTHON_LICENSE_SHA256:
+        python_license_bytes = vendored_platform_licenses.get("CPYTHON-LICENSE.txt", b"")
+    if hashlib.sha256(python_license_bytes).hexdigest() != CPYTHON_LICENSE_SHA256:
+        raise RuntimeError("Reviewed CPython license is unavailable or changed")
+    (LICENSE_DIR / "CPYTHON-LICENSE.txt").write_bytes(python_license_bytes)
 
     installed_names = {canonical(str(item["name"])) for item in inventory}
     missing = sorted(required_names - installed_names)
     if missing:
         raise RuntimeError(f"Locked build distributions are not installed: {missing}")
 
-    with urllib.request.urlopen(OPENSSL_LICENSE_URL, timeout=30) as response:
-        openssl_license = response.read()
+    try:
+        with urllib.request.urlopen(OPENSSL_LICENSE_URL, timeout=30) as response:
+            openssl_license = response.read()
+    except OSError:
+        openssl_license = vendored_platform_licenses.get("OPENSSL-LICENSE.txt", b"")
     if hashlib.sha256(openssl_license).hexdigest() != OPENSSL_LICENSE_SHA256:
         raise RuntimeError("Pinned OpenSSL license hash mismatch")
     (LICENSE_DIR / "OPENSSL-LICENSE.txt").write_bytes(openssl_license)
