@@ -1,0 +1,17 @@
+services:
+  promarkia:
+    build: .
+    ports:
+      - "127.0.0.1:8788:8788"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      PROMARKIA_HOST: 0.0.0.0
+      PROMARKIA_DATA_DIR: /data
+    volumes:
+      - promarkia-data:/data
+    restart: unless-stopped
+
+volumes:
+  promarkia-data:

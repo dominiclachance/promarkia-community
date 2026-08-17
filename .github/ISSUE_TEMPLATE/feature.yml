@@ -1,0 +1,28 @@
+name: Feature request
+description: Propose a focused local Community improvement
+title: "[Feature]: "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What local workflow problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Safety boundaries
+      options:
+        - label: This preserves explicit approval before publishing.
+          required: true
+        - label: This does not require production credentials or customer data.
+          required: true
+

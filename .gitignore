@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+data/
+dist/
+build/
+*.egg-info/
+*.log
+docs/assets/demo-frames/
+.tools/
+release/
+PromarkiaCommunityDebug.spec

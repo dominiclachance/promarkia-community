@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Run a complete, approval-first marketing campaign locally." />
+    <title>Promarkia Community</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="brand"><span class="mark">P</span> Promarkia Community</div>
+        <p class="eyebrow">Local · open source · approval first</p>
+        <h1>One URL in.<br /><span>A complete campaign out.</span></h1>
+        <p class="lede">
+          Research a company and generate positioning, landing copy, email, social, ads,
+          a content calendar, QA report and receipt—without publishing anything.
+        </p>
+      </header>
+
+      <section class="panel create-panel">
+        <form id="campaign-form">
+          <label>Company website<input id="company-url" name="company_url" type="url" placeholder="https://example.com" required /></label>
+          <label>Campaign goal<textarea id="goal" name="goal" placeholder="Launch our new operations assessment" minlength="5" required></textarea></label>
+          <div class="grid-two">
+            <label>Audience <input id="audience" name="audience" placeholder="Operations leaders" /></label>
+            <label>Offer <input id="offer" name="offer" placeholder="Free assessment" /></label>
+          </div>
+          <button type="submit" id="create-button">Build campaign</button>
+          <p class="privacy">Your provider key stays in the server process. It is never written to campaign files.</p>
+        </form>
+      </section>
+
+      <section id="result" class="panel result-panel hidden" aria-live="polite">
+        <div class="result-head">
+          <div><p class="eyebrow">Campaign workspace</p><h2 id="campaign-title">Working…</h2></div>
+          <span id="status" class="status">queued</span>
+        </div>
+        <p id="error" class="error hidden"></p>
+        <div id="artifacts" class="artifacts"></div>
+        <div class="actions">
+          <button type="button" id="approve-button" class="secondary hidden">Approve drafts</button>
+          <button type="button" id="retry-button" class="secondary hidden">Retry campaign</button>
+        </div>
+      </section>
+
+      <section class="how">
+        <article><span>01</span><h3>Research safely</h3><p>Public HTTP(S) pages only, with private-network, redirect, content-type and size limits.</p></article>
+        <article><span>02</span><h3>Generate locally</h3><p>Use the offline demo or your own OpenAI-compatible endpoint, model and API key.</p></article>
+        <article><span>03</span><h3>Approve explicitly</h3><p>Drafts and receipts stay local. Version 0.1 has no public publishing action.</p></article>
+      </section>
+    </main>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
