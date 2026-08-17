@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LICENSE_DIR = ROOT / "THIRD_PARTY_LICENSES"
 OPENSSL_LICENSE_URL = "https://raw.githubusercontent.com/openssl/openssl/openssl-3.0.15/LICENSE.txt"
 OPENSSL_LICENSE_SHA256 = "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
-CPYTHON_LICENSE_SHA256 = "62bec384df47b0328307db41455ff6ea2559e5546b394ac69148561b21703120"
+CPYTHON_LICENSE_SHA256 = "59688d8633ce27b1d8220f223b9520c4e039e4ba6ccceb345793a74fd5c155b9"
 
 LICENSES = {
     "altgraph": "MIT",
@@ -121,9 +121,11 @@ def copy_distribution_licenses() -> list[dict[str, object]]:
         python_license.read_bytes()
         if python_license
         else vendored_platform_licenses.get("CPYTHON-LICENSE.txt", b"")
-    )
+    ).replace(b"\r\n", b"\n")
     if hashlib.sha256(python_license_bytes).hexdigest() != CPYTHON_LICENSE_SHA256:
-        python_license_bytes = vendored_platform_licenses.get("CPYTHON-LICENSE.txt", b"")
+        python_license_bytes = vendored_platform_licenses.get(
+            "CPYTHON-LICENSE.txt", b""
+        ).replace(b"\r\n", b"\n")
     if hashlib.sha256(python_license_bytes).hexdigest() != CPYTHON_LICENSE_SHA256:
         raise RuntimeError("Reviewed CPython license is unavailable or changed")
     (LICENSE_DIR / "CPYTHON-LICENSE.txt").write_bytes(python_license_bytes)

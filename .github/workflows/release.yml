@@ -84,8 +84,9 @@ jobs:
         run: |
           $installer = Get-ChildItem release\*-Setup.exe | Select-Object -First 1
           $auditRoot = Join-Path $env:RUNNER_TEMP 'PromarkiaCommunityAudit'
-          & $installer.FullName /S "/D=$auditRoot"
-          if ($LASTEXITCODE -ne 0) { throw "Installer audit install failed: $LASTEXITCODE" }
+          $install = Start-Process -FilePath $installer.FullName -ArgumentList @('/S', "/D=$auditRoot") -Wait -PassThru
+          if ($install.ExitCode -ne 0) { throw "Installer audit install failed: $($install.ExitCode)" }
+          if (-not (Test-Path -LiteralPath $auditRoot)) { throw 'Installer audit directory was not created' }
           python scripts/verify_release_bundle.py $auditRoot
       - name: Build and smoke-test macOS app
         if: runner.os == 'macOS'
