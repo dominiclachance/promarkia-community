@@ -42,6 +42,13 @@ def main() -> None:
     settings = Settings.from_env()
 
     if args.command == "serve":
+        if not settings.binds_loopback_only and not settings.unsafe_allow_network_bind:
+            raise SystemExit(
+                "Refusing a non-loopback bind. Promarkia Community has no network "
+                "authentication. Use the loopback-only Docker Compose configuration, "
+                "or set PROMARKIA_UNSAFE_ALLOW_NETWORK_BIND=1 only after adding a "
+                "trusted authenticated reverse proxy."
+            )
         uvicorn.run(create_app(settings), host=settings.host, port=settings.port)
         return
 

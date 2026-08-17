@@ -6,7 +6,7 @@ Publication is blocked until the legal/provenance and application-security appro
 
 Headline: **Build an approval-ready AI marketing campaign locally, then move to hosted automation when you want zero setup.**
 
-One-line pitch: Promarkia Community is a free, local-first campaign workspace with Ollama support, human approval gates, reproducible artifacts, Docker, and native Windows/macOS installers.
+One-line pitch: Promarkia Community is a free, local-first campaign workspace with Ollama support, an explicit post-generation approval state, reproducible artifacts, Docker, and native Windows/macOS installers.
 
 ## Launch assets
 
@@ -27,11 +27,11 @@ One-line pitch: Promarkia Community is a free, local-first campaign workspace wi
 
 GitHub CTA: `Prefer zero setup? Try Promarkia Cloud` -> `https://www.promarkia.com/?utm_source=github&utm_medium=referral&utm_campaign=community_launch_2026&utm_content=readme_top`
 
-Product Hunt tagline: `Local-first AI marketing campaigns with approval gates and Ollama support.`
+Product Hunt tagline: `Local-first AI marketing campaigns with review status and Ollama support.`
 
-Product Hunt description: `Turn a brief into a structured campaign, review every step, and export the artifacts. Run it free on your machine with Docker or native installers. If you prefer managed infrastructure, the same workflow has a hosted path.`
+Product Hunt description: `Turn a brief into a structured campaign, inspect the generated artifacts, and record approval when they are ready. Run it free on your machine with Docker or native installers. If you prefer managed infrastructure, the same workflow has a hosted path.`
 
-Founder opening: `We built Promarkia Community because an open-source project should be genuinely useful without becoming a crippled demo. The local edition runs with Ollama or an OpenAI-compatible endpoint, keeps an approval gate before generation, and exports the work. Cloud is for people who want the workflow without setup—not a requirement to make the local product work.`
+Founder opening: `We built Promarkia Community because an open-source project should be genuinely useful without becoming a crippled demo. The local edition runs with Ollama or an OpenAI-compatible endpoint, generates editable drafts, records an explicit post-generation approval state, and never publishes automatically. Cloud is for people who want the workflow without setup—not a requirement to make the local product work.`
 
 ## Response rules
 

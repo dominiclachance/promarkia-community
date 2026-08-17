@@ -11,7 +11,7 @@ on:
     tags: ["v*"]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -35,7 +35,9 @@ jobs:
           python -m pip install -r requirements.lock -r requirements-build.lock
           python -m pip install --no-deps .
       - name: Build desktop application
-        run: pyinstaller --noconfirm --clean packaging/PromarkiaCommunity.spec
+        run: |
+          python scripts/build_release_metadata.py
+          pyinstaller --noconfirm --clean packaging/PromarkiaCommunity.spec
       - name: Resolve version
         id: version
         shell: bash
@@ -76,6 +78,15 @@ jobs:
             }
             if($i -eq 30) { throw 'Desktop health check failed' }
           } finally { Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue }
+      - name: Audit Windows installer contents
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $installer = Get-ChildItem release\*-Setup.exe | Select-Object -First 1
+          $auditRoot = Join-Path $env:RUNNER_TEMP 'PromarkiaCommunityAudit'
+          & $installer.FullName /S "/D=$auditRoot"
+          if ($LASTEXITCODE -ne 0) { throw "Installer audit install failed: $LASTEXITCODE" }
+          python scripts/verify_release_bundle.py $auditRoot
       - name: Build and smoke-test macOS app
         if: runner.os == 'macOS'
         shell: bash
@@ -92,6 +103,11 @@ jobs:
           trap - EXIT
           mkdir -p release
           hdiutil create -volname "Promarkia Community" -srcfolder "dist/Promarkia Community.app" -ov -format UDZO "release/Promarkia-Community-${{ steps.version.outputs.value }}-macOS.dmg"
+          audit_mount="$RUNNER_TEMP/promarkia-community-dmg"
+          mkdir -p "$audit_mount"
+          hdiutil attach -readonly -nobrowse -mountpoint "$audit_mount" "release/Promarkia-Community-${{ steps.version.outputs.value }}-macOS.dmg"
+          python scripts/verify_release_bundle.py "$audit_mount"
+          hdiutil detach "$audit_mount"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: ${{ matrix.artifact }}
@@ -101,6 +117,8 @@ jobs:
     if: github.ref_type == 'tag'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:

@@ -8,5 +8,8 @@
    verifiable receipt.
 5. Add tests for security boundaries, state transitions and new provider adapters.
 
+All inbound contributions are licensed under the repository's MIT license. Every commit must carry
+a `Signed-off-by: Name <email>` line certifying the [DCO](DCO.md); CI enforces this on pull requests.
+
 Bug reports should include the operating system, Python version, provider type, safe reproduction
 steps and redacted logs. Use the private process in `SECURITY.md` for vulnerabilities.

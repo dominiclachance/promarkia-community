@@ -33,7 +33,8 @@ The authoritative machine-readable inventory is `sbom.cdx.json`.
 Development-only dependencies are also permissively licensed: pytest and pluggy (MIT),
 iniconfig (MIT), packaging (Apache-2.0 or BSD-2-Clause), and Pygments (BSD-2-Clause).
 
-Complete license texts and source links are distributed in package metadata by the upstream
-projects. Binary release automation preserves this notice and the installed distribution
-metadata. Upstream project URLs are recorded in the package metadata embedded in the SBOM.
-
+Final desktop and Docker artifacts include `THIRD_PARTY_LICENSES/`, generated from the exact build
+environment. It contains CPython, OpenSSL, certifi/MPL, PyInstaller bootloader and installed Python
+distribution license texts. `THIRD_PARTY_LICENSES/inventory.json` records versions, SPDX
+expressions, package URLs, source/homepage references and bundled notice paths. Release CI fails if
+a required installed distribution has no discoverable license file.

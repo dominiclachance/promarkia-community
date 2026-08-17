@@ -12,6 +12,7 @@ a = Analysis(
         (os.path.join(repo_root, "app", "static"), "app/static"),
         (os.path.join(repo_root, "LICENSE"), "."),
         (os.path.join(repo_root, "THIRD_PARTY_NOTICES.md"), "."),
+        (os.path.join(repo_root, "THIRD_PARTY_LICENSES"), "THIRD_PARTY_LICENSES"),
         (os.path.join(repo_root, "sbom.cdx.json"), "."),
     ],
     hiddenimports=[],

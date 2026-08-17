@@ -3,7 +3,7 @@ from __future__ import annotations
 import ipaddress
 import socket
 from html.parser import HTMLParser
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 import httpx
 
@@ -55,6 +55,37 @@ def validate_public_url(value: str) -> str:
     return parsed.geturl()
 
 
+def pin_public_url(value: str) -> tuple[str, str, bytes]:
+    """Resolve once, validate, then connect to that exact IP.
+
+    The Host header and TLS SNI retain the original hostname, so the HTTP
+    client never performs a second attacker-controlled DNS lookup.
+    """
+    parsed = urlsplit(value)
+    if parsed.scheme not in {"http", "https"}:
+        raise UnsafeUrlError("Only http and https URLs are allowed")
+    if not parsed.hostname or parsed.username or parsed.password:
+        raise UnsafeUrlError("A public hostname without embedded credentials is required")
+    hostname = parsed.hostname.rstrip(".").lower()
+    try:
+        address = str(ipaddress.ip_address(hostname))
+        if not _is_public_ip(address):
+            raise UnsafeUrlError("Private, local or reserved network destinations are not allowed")
+    except ValueError:
+        if hostname == "localhost" or hostname.endswith(".local"):
+            raise UnsafeUrlError("Local hostnames are not allowed")
+        addresses = resolve_public_ips(hostname)
+        address = str(sorted(addresses, key=lambda item: ipaddress.ip_address(item))[0])
+
+    rendered_address = f"[{address}]" if ":" in address else address
+    default_port = 443 if parsed.scheme == "https" else 80
+    port = parsed.port or default_port
+    pinned_netloc = rendered_address if port == default_port else f"{rendered_address}:{port}"
+    host_header = hostname if port == default_port else f"{hostname}:{port}"
+    pinned_url = urlunsplit((parsed.scheme, pinned_netloc, parsed.path, parsed.query, ""))
+    return pinned_url, host_header, hostname.encode("idna")
+
+
 class TextExtractor(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
@@ -86,18 +117,19 @@ def fetch_company_text(
     max_bytes: int = 1_000_000,
     max_redirects: int = 3,
 ) -> tuple[str, str]:
-    current_url = validate_public_url(url)
+    current_url = url
     with httpx.Client(timeout=timeout_seconds, follow_redirects=False) as client:
         for redirect_index in range(max_redirects + 1):
-            # Re-resolve every hop immediately before the connection.
-            current_url = validate_public_url(current_url)
+            pinned_url, host_header, sni_hostname = pin_public_url(current_url)
             with client.stream(
                 "GET",
-                current_url,
+                pinned_url,
                 headers={
+                    "Host": host_header,
                     "User-Agent": "Promarkia-Community/0.1 (+local research fetch)",
                     "Accept": "text/html,text/plain;q=0.9",
                 },
+                extensions={"sni_hostname": sni_hostname},
             ) as response:
                 if response.status_code in {301, 302, 303, 307, 308}:
                     location = response.headers.get("location")

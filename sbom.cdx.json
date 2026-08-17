@@ -1,1 +1,707 @@
-{"components": [{"bom-ref": "BomRef.5357714280596307.6710830011496007", "name": "PyYAML", "type": "library", "version": "6.0.3"}, {"bom-ref": "BomRef.1235689926616611.5386844963525439", "name": "Pygments", "type": "library", "version": "2.21.0"}, {"bom-ref": "BomRef.7353951789982489.045840585353284946", "name": "annotated-doc", "type": "library", "version": "0.0.5"}, {"bom-ref": "BomRef.03283627798204203.39230228286911106", "name": "annotated-types", "type": "library", "version": "0.8.0"}, {"bom-ref": "BomRef.7700871223604324.6339272840290954", "name": "anyio", "type": "library", "version": "4.14.2"}, {"bom-ref": "BomRef.8722778005043538.9655566377122737", "name": "certifi", "type": "library", "version": "2026.7.22"}, {"bom-ref": "BomRef.7918608329060963.4708196873666183", "name": "click", "type": "library", "version": "8.4.2"}, {"bom-ref": "BomRef.181369199287995.19156704233003619", "name": "colorama", "type": "library", "version": "0.4.6"}, {"bom-ref": "BomRef.37782777244796617.4796590086003192", "name": "fastapi", "type": "library", "version": "0.141.1"}, {"bom-ref": "BomRef.7636238232778236.05241543010317551", "name": "h11", "type": "library", "version": "0.16.0"}, {"bom-ref": "BomRef.628603297500662.28426231927271706", "name": "httpcore", "type": "library", "version": "1.0.9"}, {"bom-ref": "BomRef.6591663074036674.26095155766330735", "name": "httptools", "type": "library", "version": "0.8.0"}, {"bom-ref": "BomRef.8684541557603211.8153259008029142", "name": "httpx", "type": "library", "version": "0.28.1"}, {"bom-ref": "BomRef.21238974617131068.16593718789215894", "name": "idna", "type": "library", "version": "3.18"}, {"bom-ref": "BomRef.043963453452256385.8586411134987099", "name": "iniconfig", "type": "library", "version": "2.3.0"}, {"bom-ref": "BomRef.24609939472250542.9322673392525587", "name": "pluggy", "type": "library", "version": "1.6.0"}, {"bom-ref": "BomRef.5150640439244117.4599345225359388", "name": "pydantic", "type": "library", "version": "2.13.4"}, {"bom-ref": "BomRef.9350275704180611.4555471618985144", "name": "pydantic_core", "type": "library", "version": "2.46.4"}, {"bom-ref": "BomRef.15596033722384628.908668010880171", "name": "pytest", "type": "library", "version": "9.0.3"}, {"bom-ref": "BomRef.207549571529412.4824409200991403", "name": "python-dotenv", "type": "library", "version": "1.2.3"}, {"bom-ref": "BomRef.46185374493022546.6002752723694037", "name": "starlette", "type": "library", "version": "1.6.0"}, {"bom-ref": "BomRef.9043756964652548.038816929469374095", "name": "typing-inspection", "type": "library", "version": "0.4.4"}, {"bom-ref": "BomRef.5218551066130633.7761928518988508", "name": "typing_extensions", "type": "library", "version": "4.16.0"}, {"bom-ref": "BomRef.7407157112312661.8267709960247689", "name": "uvicorn", "type": "library", "version": "0.52.3"}, {"bom-ref": "BomRef.9870292802392362.9905415197234619", "name": "watchfiles", "type": "library", "version": "1.2.0"}, {"bom-ref": "BomRef.8484137294574849.5501462394599881", "name": "websockets", "type": "library", "version": "17.0.1"}], "dependencies": [{"ref": "BomRef.03283627798204203.39230228286911106"}, {"ref": "BomRef.043963453452256385.8586411134987099"}, {"ref": "BomRef.1235689926616611.5386844963525439"}, {"ref": "BomRef.15596033722384628.908668010880171"}, {"ref": "BomRef.181369199287995.19156704233003619"}, {"ref": "BomRef.207549571529412.4824409200991403"}, {"ref": "BomRef.21238974617131068.16593718789215894"}, {"ref": "BomRef.24609939472250542.9322673392525587"}, {"ref": "BomRef.37782777244796617.4796590086003192"}, {"ref": "BomRef.46185374493022546.6002752723694037"}, {"ref": "BomRef.5150640439244117.4599345225359388"}, {"ref": "BomRef.5218551066130633.7761928518988508"}, {"ref": "BomRef.5357714280596307.6710830011496007"}, {"ref": "BomRef.628603297500662.28426231927271706"}, {"ref": "BomRef.6591663074036674.26095155766330735"}, {"ref": "BomRef.7353951789982489.045840585353284946"}, {"ref": "BomRef.7407157112312661.8267709960247689"}, {"ref": "BomRef.7636238232778236.05241543010317551"}, {"ref": "BomRef.7700871223604324.6339272840290954"}, {"ref": "BomRef.7918608329060963.4708196873666183"}, {"ref": "BomRef.8484137294574849.5501462394599881"}, {"ref": "BomRef.8684541557603211.8153259008029142"}, {"ref": "BomRef.8722778005043538.9655566377122737"}, {"ref": "BomRef.9043756964652548.038816929469374095"}, {"ref": "BomRef.9350275704180611.4555471618985144"}, {"ref": "BomRef.9870292802392362.9905415197234619"}], "metadata": {"timestamp": "2026-08-17T17:24:05.432492+00:00"}, "serialNumber": "urn:uuid:b766a57d-e8ec-450a-862d-346da34e1ba5", "version": 1, "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json", "bomFormat": "CycloneDX", "specVersion": "1.4"}
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "BomRef.5357714280596307.6710830011496007",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pyyaml.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "PyYAML",
+      "purl": "pkg:pypi/pyyaml@6.0.3",
+      "type": "library",
+      "version": "6.0.3"
+    },
+    {
+      "bom-ref": "BomRef.1235689926616611.5386844963525439",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pygments.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-2-Clause"
+        }
+      ],
+      "name": "Pygments",
+      "purl": "pkg:pypi/pygments@2.21.0",
+      "type": "library",
+      "version": "2.21.0"
+    },
+    {
+      "bom-ref": "BomRef.7353951789982489.045840585353284946",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/fastapi/annotated-doc"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "annotated-doc",
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "type": "library",
+      "version": "0.0.5"
+    },
+    {
+      "bom-ref": "BomRef.03283627798204203.39230228286911106",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/annotated-types/annotated-types"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "annotated-types",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "type": "library",
+      "version": "0.8.0"
+    },
+    {
+      "bom-ref": "BomRef.7700871223604324.6339272840290954",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://anyio.readthedocs.io/en/latest/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "anyio",
+      "purl": "pkg:pypi/anyio@4.14.2",
+      "type": "library",
+      "version": "4.14.2"
+    },
+    {
+      "bom-ref": "BomRef.8722778005043538.9655566377122737",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/certifi/python-certifi"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MPL-2.0"
+        }
+      ],
+      "name": "certifi",
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "type": "library",
+      "version": "2026.7.22"
+    },
+    {
+      "bom-ref": "BomRef.7918608329060963.4708196873666183",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://click.palletsprojects.com/page/changes/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "click",
+      "purl": "pkg:pypi/click@8.4.2",
+      "type": "library",
+      "version": "8.4.2"
+    },
+    {
+      "bom-ref": "BomRef.181369199287995.19156704233003619",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tartley/colorama"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "colorama",
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "type": "library",
+      "version": "0.4.6"
+    },
+    {
+      "bom-ref": "BomRef.37782777244796617.4796590086003192",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/fastapi/fastapi"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "fastapi",
+      "purl": "pkg:pypi/fastapi@0.141.1",
+      "type": "library",
+      "version": "0.141.1"
+    },
+    {
+      "bom-ref": "BomRef.7636238232778236.05241543010317551",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-hyper/h11"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "h11",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "type": "library",
+      "version": "0.16.0"
+    },
+    {
+      "bom-ref": "BomRef.628603297500662.28426231927271706",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.encode.io/httpcore"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "httpcore",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "type": "library",
+      "version": "1.0.9"
+    },
+    {
+      "bom-ref": "BomRef.6591663074036674.26095155766330735",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/MagicStack/httptools"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "httptools",
+      "purl": "pkg:pypi/httptools@0.8.0",
+      "type": "library",
+      "version": "0.8.0"
+    },
+    {
+      "bom-ref": "BomRef.8684541557603211.8153259008029142",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/encode/httpx/blob/master/CHANGELOG.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "httpx",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "type": "library",
+      "version": "0.28.1"
+    },
+    {
+      "bom-ref": "BomRef.21238974617131068.16593718789215894",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/kjd/idna/blob/master/HISTORY.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "idna",
+      "purl": "pkg:pypi/idna@3.18",
+      "type": "library",
+      "version": "3.18"
+    },
+    {
+      "bom-ref": "BomRef.043963453452256385.8586411134987099",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pytest-dev/iniconfig"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "iniconfig",
+      "purl": "pkg:pypi/iniconfig@2.3.0",
+      "type": "library",
+      "version": "2.3.0"
+    },
+    {
+      "bom-ref": "BomRef.24609939472250542.9322673392525587",
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pluggy",
+      "purl": "pkg:pypi/pluggy@1.6.0",
+      "type": "library",
+      "version": "1.6.0"
+    },
+    {
+      "bom-ref": "BomRef.5150640439244117.4599345225359388",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pydantic/pydantic"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pydantic",
+      "purl": "pkg:pypi/pydantic@2.13.4",
+      "type": "library",
+      "version": "2.13.4"
+    },
+    {
+      "bom-ref": "BomRef.9350275704180611.4555471618985144",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pydantic/pydantic"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pydantic_core",
+      "purl": "pkg:pypi/pydantic-core@2.46.4",
+      "type": "library",
+      "version": "2.46.4"
+    },
+    {
+      "bom-ref": "BomRef.15596033722384628.908668010880171",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://docs.pytest.org/en/stable/changelog.html"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pytest",
+      "purl": "pkg:pypi/pytest@9.0.3",
+      "type": "library",
+      "version": "9.0.3"
+    },
+    {
+      "bom-ref": "BomRef.207549571529412.4824409200991403",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/theskumar/python-dotenv"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "python-dotenv",
+      "purl": "pkg:pypi/python-dotenv@1.2.3",
+      "type": "library",
+      "version": "1.2.3"
+    },
+    {
+      "bom-ref": "BomRef.46185374493022546.6002752723694037",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Kludex/starlette"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "starlette",
+      "purl": "pkg:pypi/starlette@1.6.0",
+      "type": "library",
+      "version": "1.6.0"
+    },
+    {
+      "bom-ref": "BomRef.9043756964652548.038816929469374095",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pydantic/typing-inspection"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "typing-inspection",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "type": "library",
+      "version": "0.4.4"
+    },
+    {
+      "bom-ref": "BomRef.5218551066130633.7761928518988508",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python/typing_extensions/issues"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "typing_extensions",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "type": "library",
+      "version": "4.16.0"
+    },
+    {
+      "bom-ref": "BomRef.7407157112312661.8267709960247689",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://uvicorn.dev/release-notes"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "uvicorn",
+      "purl": "pkg:pypi/uvicorn@0.52.3",
+      "type": "library",
+      "version": "0.52.3"
+    },
+    {
+      "bom-ref": "BomRef.9870292802392362.9905415197234619",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/samuelcolvin/watchfiles"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "watchfiles",
+      "purl": "pkg:pypi/watchfiles@1.2.0",
+      "type": "library",
+      "version": "1.2.0"
+    },
+    {
+      "bom-ref": "BomRef.8484137294574849.5501462394599881",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-websockets/websockets"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "websockets",
+      "purl": "pkg:pypi/websockets@17.0.1",
+      "type": "library",
+      "version": "17.0.1"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://packaging.pypa.io/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ],
+      "name": "packaging",
+      "purl": "pkg:pypi/packaging@26.3",
+      "type": "library",
+      "version": "26.3"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pyinstaller.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "GPL-2.0-or-later WITH Bootloader-exception"
+        }
+      ],
+      "name": "pyinstaller",
+      "purl": "pkg:pypi/pyinstaller@6.21.0",
+      "type": "library",
+      "version": "6.21.0"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.python.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "CPython",
+      "purl": "pkg:generic/cpython@3.13.2",
+      "type": "platform",
+      "version": "3.13.2"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.openssl.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "OpenSSL",
+      "purl": "pkg:generic/openssl@3.0.15",
+      "type": "library",
+      "version": "3.0.15"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://altgraph.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "altgraph",
+      "purl": "pkg:pypi/altgraph@0.17.5",
+      "type": "library",
+      "version": "0.17.5"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/erocarrera/pefile"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pefile",
+      "purl": "pkg:pypi/pefile@2024.8.26",
+      "type": "library",
+      "version": "2024.8.26"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pyinstaller/pyinstaller-hooks-contrib"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "GPL-2.0-or-later AND Apache-2.0"
+        }
+      ],
+      "name": "pyinstaller-hooks-contrib",
+      "purl": "pkg:pypi/pyinstaller-hooks-contrib@2026.6",
+      "type": "library",
+      "version": "2026.6"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/enthought/pywin32-ctypes"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "pywin32-ctypes",
+      "purl": "pkg:pypi/pywin32-ctypes@0.2.3",
+      "type": "library",
+      "version": "0.2.3"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pypa/setuptools"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "setuptools",
+      "purl": "pkg:pypi/setuptools@84.0.0",
+      "type": "library",
+      "version": "84.0.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "BomRef.03283627798204203.39230228286911106"
+    },
+    {
+      "ref": "BomRef.043963453452256385.8586411134987099"
+    },
+    {
+      "ref": "BomRef.1235689926616611.5386844963525439"
+    },
+    {
+      "ref": "BomRef.15596033722384628.908668010880171"
+    },
+    {
+      "ref": "BomRef.181369199287995.19156704233003619"
+    },
+    {
+      "ref": "BomRef.207549571529412.4824409200991403"
+    },
+    {
+      "ref": "BomRef.21238974617131068.16593718789215894"
+    },
+    {
+      "ref": "BomRef.24609939472250542.9322673392525587"
+    },
+    {
+      "ref": "BomRef.37782777244796617.4796590086003192"
+    },
+    {
+      "ref": "BomRef.46185374493022546.6002752723694037"
+    },
+    {
+      "ref": "BomRef.5150640439244117.4599345225359388"
+    },
+    {
+      "ref": "BomRef.5218551066130633.7761928518988508"
+    },
+    {
+      "ref": "BomRef.5357714280596307.6710830011496007"
+    },
+    {
+      "ref": "BomRef.628603297500662.28426231927271706"
+    },
+    {
+      "ref": "BomRef.6591663074036674.26095155766330735"
+    },
+    {
+      "ref": "BomRef.7353951789982489.045840585353284946"
+    },
+    {
+      "ref": "BomRef.7407157112312661.8267709960247689"
+    },
+    {
+      "ref": "BomRef.7636238232778236.05241543010317551"
+    },
+    {
+      "ref": "BomRef.7700871223604324.6339272840290954"
+    },
+    {
+      "ref": "BomRef.7918608329060963.4708196873666183"
+    },
+    {
+      "ref": "BomRef.8484137294574849.5501462394599881"
+    },
+    {
+      "ref": "BomRef.8684541557603211.8153259008029142"
+    },
+    {
+      "ref": "BomRef.8722778005043538.9655566377122737"
+    },
+    {
+      "ref": "BomRef.9043756964652548.038816929469374095"
+    },
+    {
+      "ref": "BomRef.9350275704180611.4555471618985144"
+    },
+    {
+      "ref": "BomRef.9870292802392362.9905415197234619"
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-08-17T17:24:05.432492+00:00"
+  },
+  "serialNumber": "urn:uuid:b766a57d-e8ec-450a-862d-346da34e1ba5",
+  "specVersion": "1.4",
+  "version": 1
+}

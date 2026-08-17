@@ -1,8 +1,12 @@
 # Promarkia Community
 
 Turn a company URL and campaign goal into a complete, editable campaign package on your own
-computer. Promarkia Community is free, MIT-licensed and approval-first: version 0.1 generates
+computer. Promarkia Community is free, MIT-licensed and review-first: version 0.1 generates
 drafts and receipts but cannot publish them publicly.
+
+Data stays in the configured local directory, but website text and the campaign brief are sent to
+your selected provider unless you use the offline mock or a loopback Ollama instance. See
+[PRIVACY.md](PRIVACY.md) for the exact data flow.
 
 ![Promarkia Community campaign demo](docs/assets/demo.gif)
 
@@ -74,6 +78,12 @@ defaults to `http://127.0.0.1:11434`. LM Studio, vLLM and LocalAI remain availab
 OpenAI-compatible provider.
 
 ## Docker
+
+The supported Compose configuration publishes Promarkia on `127.0.0.1` only. The
+Community edition has no network authentication: do not publish port 8788 on a LAN
+or the public internet. A direct non-loopback server bind fails closed unless the
+explicit `PROMARKIA_UNSAFE_ALLOW_NETWORK_BIND=1` acknowledgement is set behind a
+trusted authenticated reverse proxy.
 
 ```bash
 docker compose up --build

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "promarkia-community"
 version = "0.1.0"
-description = "Local, approval-first AI campaign workspace"
+description = "Local, review-first AI campaign workspace"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
