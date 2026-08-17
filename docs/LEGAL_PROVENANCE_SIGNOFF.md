@@ -532,3 +532,70 @@ Owner rights, trademark clearance and any licensed-counsel opinion remain human/
 Accordingly the repository remains at **CONDITIONAL PASS** and should stay private until items 1–3
 are evidenced; publication may then proceed only through the controlled visibility/protection
 transaction in item 4.
+
+---
+
+## Exact-commit native evidence recheck — 2026-08-17 17:09 EDT
+
+**Release-candidate commit:** `93a270dbe7655651485d937b855f29eec04def03`
+
+**CI run:** `32069311626` — **SUCCESS**
+
+**Desktop release run:** `32069320022` — **SUCCESS**
+
+**Provenance/CI disposition:** **FINAL NATIVE ARTIFACT GATE CLOSED**
+
+GitHub's API independently binds both successful runs to the exact release-candidate commit above.
+The CI run completed the full operating-system/Python test matrix, SBOM job, dependency and static
+security scans, compilation and secret scan. The DCO job is expectedly skipped on a direct push; the
+commit message itself contains Dominic Lachance's `Signed-off-by` trailer. GitHub reports the commit
+as cryptographically unsigned, so this DCO evidence does not replace the separate L1 owner/corporate
+rights attestation.
+
+The Desktop release run provides the missing final native-package evidence:
+
+- Windows native build and smoke test succeeded, followed by a successful
+  `Audit Windows installer contents` step against the silently installed package.
+- macOS native build and smoke test succeeded. The successful macOS build step includes creation of
+  the DMG, read-only mounting, strengthened bundle verification and detach.
+- `windows-installer`: artifact id `9301187301`, 16,327,112 bytes, not expired,
+  digest `sha256:f4f7dc4adfc2ef46b2668c2370234712027c39919d377c054ea41065b0d47779`.
+- `macos-dmg`: artifact id `9301122635`, 19,252,516 bytes, not expired,
+  digest `sha256:e06d507c7456d7c947bd48c6a363e4a3f3b3cf88f5ebc1c625ba63747c717696`.
+- GitHub records both artifacts as produced from commit `93a270dbe7655651485d937b855f29eec04def03`
+  and expiring on 2026-11-15.
+
+### Gate closed by this evidence
+
+This evidence closes the previously open **L2 final native artifact provenance/CI gate**: the exact
+remediated commit has now built and smoke-tested on native Windows and macOS runners, and the
+installed Windows bundle and mounted read-only macOS DMG both passed the strengthened packaged
+inventory/SBOM/license-path audit. Together with the prior source rechecks, all identified fixable
+source, license-metadata and native-packaging provenance findings are resolved.
+
+It does **not** establish copyright ownership, corporate licensing authority, trademark
+non-infringement, or a lawyer's opinion.
+
+### Gates that remain open and non-delegable
+
+1. **L1 owner rights:** Dominic Lachance must authenticate approval of the final rights attestation
+   and final release commit and retain support for Agentix Labs' ownership and MIT-licensing
+   authority. The DCO trailer and successful CI are not substitutes for that attestation.
+2. **L3 trademark:** the responsible human must authorize the marks and document the appropriate
+   trademark-clearance decision. This AI review cannot perform or sign that human legal decision.
+3. **Licensed counsel:** if the launch requires an actual legal opinion or counsel sign-off, it must
+   come from retained, qualified counsel; no such opinion is evidenced here.
+4. **Post-public branch protection:** immediately after visibility changes, apply the prepared
+   protections and verify them through GitHub's API before tagging, accepting contributions or
+   announcing the launch, following the transaction documented in the prior section.
+
+### Current final verdict
+
+**Source, technical provenance and exact native packaging: PASS.**
+
+**Overall legal/publication gate: CONDITIONAL PASS.**
+
+The only remaining conditions are the non-delegable owner-rights and trademark decisions, any
+licensed-counsel opinion required by launch policy, and the platform-constrained post-public branch-
+protection readback. Do not describe this engineering provenance pass as external legal counsel's
+approval.
