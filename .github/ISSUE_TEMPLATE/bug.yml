@@ -1,7 +1,7 @@
 name: Bug report
 description: Report a reproducible Community Edition defect
 title: "[Bug]: "
-labels: [bug, triage]
+labels: [bug, needs-triage]
 body:
   - type: markdown
     attributes:
@@ -37,4 +37,3 @@ body:
     attributes:
       label: Redacted logs
       render: shell
-
