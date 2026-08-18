@@ -256,7 +256,10 @@ jobs:
       - name: Remove Windows signing credentials
         if: always() && runner.os == 'Windows'
         shell: pwsh
-        run: Remove-Item -LiteralPath $env:WINDOWS_CERTIFICATE_PATH -Force -ErrorAction SilentlyContinue
+        run: |
+          if (-not [string]::IsNullOrWhiteSpace($env:WINDOWS_CERTIFICATE_PATH)) {
+            Remove-Item -LiteralPath $env:WINDOWS_CERTIFICATE_PATH -Force -ErrorAction SilentlyContinue
+          }
       - name: Remove macOS signing credentials
         if: always() && runner.os == 'macOS'
         shell: bash
