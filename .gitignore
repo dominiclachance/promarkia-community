@@ -3,7 +3,7 @@
 __pycache__/
 .pytest_cache/
 *.py[cod]
-data/
+/data/
 dist/
 build/
 *.egg-info/
@@ -12,3 +12,11 @@ docs/assets/demo-frames/
 .tools/
 release/
 PromarkiaCommunityDebug.spec
+.tmp*/
+.tmp-*
+artifacts/qa/
+apps/web/node_modules/
+apps/web/public/
+apps/**/*.bak*
+apps/**/*.pre-*
+apps/**/*.disabled

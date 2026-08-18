@@ -1,39 +1,50 @@
 # Promarkia Community
 
-Turn a company URL and campaign goal into a complete, editable campaign package on your own
-computer. Promarkia Community is free, MIT-licensed and review-first: version 0.1 generates
-drafts and receipts but cannot publish them publicly.
+Run the complete core Promarkia workspace on your own computer: general chat, all 15 specialized squads, conversation history, artifacts, recurring tasks, Launchpad workflows, MCP servers, model/provider keys, media creation, connected tools, and approval-first publishing.
 
-Data stays in the configured local directory, but website text and the campaign brief are sent to
-your selected provider unless you use the offline mock or a loopback Ollama instance. See
-[PRIVACY.md](PRIVACY.md) for the exact data flow.
+Community is the local, single-owner edition. It has no Promarkia subscription, billing, credits, Firebase, Firestore, cloud multi-tenancy, or managed OAuth infrastructure. You supply and pay your chosen AI and integration providers directly.
 
-![Promarkia Community campaign demo](docs/assets/demo.gif)
+![Promarkia Community workspace](docs/assets/community-desktop.png)
+
+![Promarkia Community local workspace tour](docs/assets/demo.gif)
+
+## Included locally
+
+- General Chat and the Assistant, Image Creator, Video, Social Media, Copywriting, SEO, Campaign Planner, Digital Ads, Coders, Data Scientist, Lead Generation, Email Marketing, Analytics, Competitor Intelligence, and Brand Guidelines squads
+- interactive multi-agent conversations and squad routing
+- local conversation history, run records, uploaded files, and generated artifacts
+- OpenAI, Ollama, and OpenAI-compatible model providers
+- encrypted local API-key and integration credential storage
+- stdio and Streamable HTTP MCP servers
+- image, video, research, document, spreadsheet, and browser tools used by the squads
+- Gmail, Outlook, WordPress, LinkedIn, Reddit, X, Facebook, Instagram, calendar, CRM, and other BYO connections used by configured tools
+- actual send, publish, upload, and create actions behind a fail-closed approval queue
+- one-time, hourly, daily, weekly, cron, and randomized recurring schedules
+- Launchpad workflow catalogue
+- local token/cost ledger, warning threshold, and optional hard cap
+- one local owner profile and workspace
+
+External capabilities work only after you configure the required provider account, credentials, connection identifiers, and quotas. Local mode does not create or manage third-party accounts for you.
 
 ## Install
 
-- **Windows/macOS:** download the latest desktop release from
-  `github.com/dominiclachance/promarkia-community/releases`.
-- **Docker:** run `docker compose up --build`.
-- **Python:** follow the five-minute start below.
+### Desktop
 
-Desktop artifacts are built and smoke-tested on their native operating systems. Preview builds
-are unsigned until Agentix Labs code-signing and Apple notarization certificates are configured.
+Download the current Windows installer or macOS DMG from the repository's Releases page. Preview binaries are unsigned until Windows code-signing and Apple notarization are configured.
 
-## What it creates
+### Docker
 
-- company research and open questions
-- positioning and message hierarchy
-- landing-page copy
-- four-email sequence
-- eight social drafts
-- six ad concepts
-- 14-day content calendar
-- QA report and hash-verifiable receipt
+```bash
+docker compose up --build
+```
 
-## Five-minute start
+Open <http://127.0.0.1:8788>. Data persists in the `promarkia-data` volume. The published port is loopback-only.
 
-Requires Python 3.11+.
+When Ollama runs on the Docker host, configure its base URL as `http://host.docker.internal:11434/v1`.
+
+### Python
+
+Requires Python 3.11 or 3.12 and Node 22 only when rebuilding the frontend.
 
 ```bash
 python -m venv .venv
@@ -41,87 +52,60 @@ python -m venv .venv
 # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.lock
 pip install --no-deps -e .
+python scripts/build_full_local.py
 promarkia serve
 ```
 
-Open <http://127.0.0.1:8788>. The default `mock` provider is offline and deterministic, so
-the interface works without an API key. It still fetches the public company page; use the
-automated tests if you are offline.
+Open <http://127.0.0.1:8788>.
 
-## Use your own model provider
+## First run
 
-Copy `.env.example` to `.env`, then set:
+1. Open **API Keys**.
+2. Choose Ollama, OpenAI, or an OpenAI-compatible endpoint.
+3. Configure the model and base URL, store the required key, and test the connection.
+4. Choose General Chat or any squad and start a conversation.
+5. Add provider accounts under **Connect Integrations** and custom tools under **MCP Servers**.
+6. Review every external action under **Approvals**. Approval authorizes one identical action once; later attempts require a new approval.
 
-```dotenv
-PROMARKIA_PROVIDER=openai-compatible
-PROMARKIA_BASE_URL=https://api.openai.com/v1
-PROMARKIA_MODEL=gpt-4.1-mini
-PROMARKIA_API_KEY=your-key-here
-```
+For a guided walkthrough, see [Local Workspace Tutorial](docs/TUTORIAL.md).
 
-The key is read from the process environment. It is not written to SQLite, artifacts, receipts
-or application responses. Any endpoint implementing the common `/chat/completions` contract
-can be used.
+## Approval-first publishing
 
-### Ollama and fully local models
+Promarkia may draft freely, but supported external mutations fail closed. The first attempt creates a redacted local approval request and does not execute. Approve that request in the UI, then retry the same action. A changed payload or later repeat creates a new request.
 
-Install Ollama, pull a model, and start Promarkia with the native keyless provider:
+This guard covers 21 mutation tools, including email, calendar, WordPress, social publishing, document creation, and external-storage writes. It is a safety boundary, not a substitute for reviewing provider permissions and generated content.
 
-```bash
-ollama pull llama3.1:8b
-PROMARKIA_PROVIDER=ollama PROMARKIA_MODEL=llama3.1:8b promarkia serve
-```
+For media actions that require a publicly fetchable asset URL, set `PROMARKIA_PUBLIC_ASSET_BASE_URL` to a URL the external provider can reach. The default loopback URL is intentionally private.
 
-On Windows PowerShell, set the variables first with `$env:PROMARKIA_PROVIDER="ollama"` and
-`$env:PROMARKIA_MODEL="llama3.1:8b"`. The Ollama provider only accepts loopback endpoints and
-defaults to `http://127.0.0.1:11434`. LM Studio, vLLM and LocalAI remain available through the
-OpenAI-compatible provider.
+## Local data and privacy
 
-## Docker
+The desktop app stores its SQLite databases, encrypted vault key, schedules, conversations, and files under:
 
-The supported Compose configuration publishes Promarkia on `127.0.0.1` only. The
-Community edition has no network authentication: do not publish port 8788 on a LAN
-or the public internet. A direct non-loopback server bind fails closed unless the
-explicit `PROMARKIA_UNSAFE_ALLOW_NETWORK_BIND=1` acknowledgement is set behind a
-trusted authenticated reverse proxy.
+- Windows: `%LOCALAPPDATA%\PromarkiaCommunity`
+- macOS: `~/Library/Application Support/PromarkiaCommunity`
+- Linux: `${XDG_DATA_HOME:-~/.local/share}/PromarkiaCommunity`
+- Docker: `/data` in the `promarkia-data` volume
 
-```bash
-docker compose up --build
-```
+Set `PROMARKIA_DATA_DIR` to override the location. Back up the directory before deleting it. See [PRIVACY.md](PRIVACY.md) for provider data flows.
 
-The published port binds to `127.0.0.1` by default and generated files persist in the named
-`promarkia-data` volume.
+## Network security
+
+Community is designed for one trusted user and binds to `127.0.0.1` by default. It has no network login screen. Do not expose it to a LAN or the public internet. A non-loopback bind is rejected unless `PROMARKIA_UNSAFE_ALLOW_NETWORK_BIND=1` is explicitly set behind your own authenticated reverse proxy.
+
+See [SECURITY.md](SECURITY.md) for the threat model and reporting process.
+
+## Community versus Cloud
+
+The core workspace and squads run locally. Promarkia Cloud charges for managed operation: hosted identity and workspaces, managed OAuth, infrastructure, upgrades, backups, uptime, queues, and support. Community replaces those cloud services with a single-owner local profile, encrypted local secrets, SQLite, local files, and your own provider accounts.
 
 ## CLI
 
 ```bash
-promarkia create https://example.com "Launch the new service" \
-  --audience "Operations leaders" --offer "Free assessment"
-promarkia list
-promarkia show CAMPAIGN_ID
+promarkia serve
+promarkia serve --port 8790 --no-browser
+promarkia doctor
 ```
 
-## Local data
+## License
 
-SQLite and generated campaigns are stored in `./data` by default. Delete that directory to
-remove your local history. Never commit `.env` or `data/`.
-
-## Security model
-
-- local-only network binding by default
-- HTTP(S)-only company research with private/reserved-network rejection
-- DNS validation on every redirect, bounded redirects, response size and timeout
-- no shell execution, public posting, managed OAuth or multi-user access
-- UUID-derived artifact paths and a fixed artifact allowlist
-- provider keys remain environment-only
-
-See [SECURITY.md](SECURITY.md) for limitations and reporting instructions.
-
-For a guided walkthrough, see [Build Your First Local Campaign](docs/TUTORIAL.md).
-
-## Community versus Promarkia Cloud
-
-Community is the free local campaign workspace. Promarkia Cloud adds managed hosting,
-maintenance, backups, integrations and scheduling for people who do not want to operate the
-software themselves. Generated content quality and provider usage remain bounded by the model
-and API account you choose locally.
+Promarkia Community is MIT-licensed. Third-party notices, exact dependency inventory, license texts, checksums, and a CycloneDX SBOM are included in release bundles.

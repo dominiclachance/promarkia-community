@@ -3,7 +3,61 @@
   "bomFormat": "CycloneDX",
   "components": [
     {
-      "bom-ref": "BomRef.5357714280596307.6710830011496007",
+      "bom-ref": "BomRef.4357201254107276.3901474103126624",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.makotemplates.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "Mako",
+      "purl": "pkg:pypi/mako@1.4.1",
+      "type": "library",
+      "version": "1.4.1"
+    },
+    {
+      "bom-ref": "BomRef.7022507721666803.2674495250282619",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://palletsprojects.com/donate"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "MarkupSafe",
+      "purl": "pkg:pypi/markupsafe@3.0.3",
+      "type": "library",
+      "version": "3.0.3"
+    },
+    {
+      "bom-ref": "BomRef.16842694512060752.9341521412851407",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jpadilla/pyjwt"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "PyJWT",
+      "purl": "pkg:pypi/pyjwt@2.13.0",
+      "type": "library",
+      "version": "2.13.0"
+    },
+    {
+      "bom-ref": "BomRef.8548364268067808.8386596816359242",
       "externalReferences": [
         {
           "type": "website",
@@ -21,25 +75,97 @@
       "version": "6.0.3"
     },
     {
-      "bom-ref": "BomRef.1235689926616611.5386844963525439",
+      "bom-ref": "BomRef.9374191116025348.8084663479869756",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://pygments.org"
+          "url": "https://github.com/deepbrook/Pysher"
         }
       ],
       "licenses": [
         {
-          "expression": "BSD-2-Clause"
+          "expression": "MIT"
         }
       ],
-      "name": "Pygments",
-      "purl": "pkg:pypi/pygments@2.21.0",
+      "name": "Pysher",
+      "purl": "pkg:pypi/pysher@1.0.8",
       "type": "library",
-      "version": "2.21.0"
+      "version": "1.0.8"
     },
     {
-      "bom-ref": "BomRef.7353951789982489.045840585353284946",
+      "bom-ref": "BomRef.5793218295979481.638132487266555",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.sqlalchemy.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "SQLAlchemy",
+      "purl": "pkg:pypi/sqlalchemy@2.0.52",
+      "type": "library",
+      "version": "2.0.52"
+    },
+    {
+      "bom-ref": "BomRef.21413786201941887.2366143998461292",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Uberi/speech_recognition#readme"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "SpeechRecognition",
+      "purl": "pkg:pypi/speechrecognition@3.17.0",
+      "type": "library",
+      "version": "3.17.0"
+    },
+    {
+      "bom-ref": "BomRef.8942731259919421.7267505272785817",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Tinche/aiofiles#history"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "aiofiles",
+      "purl": "pkg:pypi/aiofiles@24.1.0",
+      "type": "library",
+      "version": "24.1.0"
+    },
+    {
+      "bom-ref": "BomRef.5987018554439074.3966312776703622",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://alembic.sqlalchemy.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "alembic",
+      "purl": "pkg:pypi/alembic@1.19.1",
+      "type": "library",
+      "version": "1.19.1"
+    },
+    {
+      "bom-ref": "BomRef.559516903629993.2036030787510641",
       "externalReferences": [
         {
           "type": "website",
@@ -57,7 +183,7 @@
       "version": "0.0.5"
     },
     {
-      "bom-ref": "BomRef.03283627798204203.39230228286911106",
+      "bom-ref": "BomRef.04379609282070274.6119388311805434",
       "externalReferences": [
         {
           "type": "website",
@@ -75,7 +201,25 @@
       "version": "0.8.0"
     },
     {
-      "bom-ref": "BomRef.7700871223604324.6339272840290954",
+      "bom-ref": "BomRef.7607008235156099.6652771296112886",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/anthropics/anthropic-sdk-python"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "anthropic",
+      "purl": "pkg:pypi/anthropic@0.122.0",
+      "type": "library",
+      "version": "0.122.0"
+    },
+    {
+      "bom-ref": "BomRef.22067013825648696.3947818348277701",
       "externalReferences": [
         {
           "type": "website",
@@ -93,7 +237,133 @@
       "version": "4.14.2"
     },
     {
-      "bom-ref": "BomRef.8722778005043538.9655566377122737",
+      "bom-ref": "BomRef.04630676805650513.16106953325457773",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.attrs.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "attrs",
+      "purl": "pkg:pypi/attrs@26.1.0",
+      "type": "library",
+      "version": "26.1.0"
+    },
+    {
+      "bom-ref": "BomRef.28517484048712993.38493623202048244",
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "autogen-agentchat",
+      "purl": "pkg:pypi/autogen-agentchat@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "bom-ref": "BomRef.23042029673185582.3349400426219532",
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "autogen-core",
+      "purl": "pkg:pypi/autogen-core@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "bom-ref": "BomRef.5468967090497336.031216326877978928",
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "autogen-ext",
+      "purl": "pkg:pypi/autogen-ext@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "bom-ref": "BomRef.41320373385228004.709092818772471",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "azure-ai-documentintelligence",
+      "purl": "pkg:pypi/azure-ai-documentintelligence@1.0.2",
+      "type": "library",
+      "version": "1.0.2"
+    },
+    {
+      "bom-ref": "BomRef.3389990287136847.8384706872067506",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/core/azure-core"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "azure-core",
+      "purl": "pkg:pypi/azure-core@1.41.0",
+      "type": "library",
+      "version": "1.41.0"
+    },
+    {
+      "bom-ref": "BomRef.6927824258128814.4838264439670502",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Azure/azure-sdk-for-python"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "azure-identity",
+      "purl": "pkg:pypi/azure-identity@1.25.3",
+      "type": "library",
+      "version": "1.25.3"
+    },
+    {
+      "bom-ref": "BomRef.7159075804571207.14452580858696962",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.crummy.com/software/BeautifulSoup/bs4/download/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "beautifulsoup4",
+      "purl": "pkg:pypi/beautifulsoup4@4.15.0",
+      "type": "library",
+      "version": "4.15.0"
+    },
+    {
+      "bom-ref": "BomRef.1346674095673126.03129973189309099",
       "externalReferences": [
         {
           "type": "website",
@@ -111,7 +381,43 @@
       "version": "2026.7.22"
     },
     {
-      "bom-ref": "BomRef.7918608329060963.4708196873666183",
+      "bom-ref": "BomRef.1055857082689623.8887697627376562",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://cffi.readthedocs.io/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT-0"
+        }
+      ],
+      "name": "cffi",
+      "purl": "pkg:pypi/cffi@2.1.1",
+      "type": "library",
+      "version": "2.1.1"
+    },
+    {
+      "bom-ref": "BomRef.7481848835459706.4369925182165014",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "charset-normalizer",
+      "purl": "pkg:pypi/charset-normalizer@3.5.1",
+      "type": "library",
+      "version": "3.5.1"
+    },
+    {
+      "bom-ref": "BomRef.03488820484596966.8428137703979517",
       "externalReferences": [
         {
           "type": "website",
@@ -129,7 +435,25 @@
       "version": "8.4.2"
     },
     {
-      "bom-ref": "BomRef.181369199287995.19156704233003619",
+      "bom-ref": "BomRef.6579358764097275.29782383522233336",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://github.com/mwilliamson/python-cobble"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "cobble",
+      "purl": "pkg:pypi/cobble@0.1.4",
+      "type": "library",
+      "version": "0.1.4"
+    },
+    {
+      "bom-ref": "BomRef.9884915904963562.2409420511532695",
       "externalReferences": [
         {
           "type": "website",
@@ -147,7 +471,205 @@
       "version": "0.4.6"
     },
     {
-      "bom-ref": "BomRef.37782777244796617.4796590086003192",
+      "bom-ref": "BomRef.9923284460658527.6683121734933717",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://coloredlogs.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "coloredlogs",
+      "purl": "pkg:pypi/coloredlogs@15.0.1",
+      "type": "library",
+      "version": "15.0.1"
+    },
+    {
+      "bom-ref": "BomRef.6823627015496827.44123483023279775",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/composiohq/composio"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "composio",
+      "purl": "pkg:pypi/composio@0.19.0",
+      "type": "library",
+      "version": "0.19.0"
+    },
+    {
+      "bom-ref": "BomRef.1858077793421088.01866496552135799",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/ComposioHQ/composio-base-py"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "composio-client",
+      "purl": "pkg:pypi/composio-client@1.43.0",
+      "type": "library",
+      "version": "1.43.0"
+    },
+    {
+      "bom-ref": "BomRef.2897064358590322.7536748045323607",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/contourpy/contourpy"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "contourpy",
+      "purl": "pkg:pypi/contourpy@1.3.3",
+      "type": "library",
+      "version": "1.3.3"
+    },
+    {
+      "bom-ref": "BomRef.2637443298039861.4600396635727684",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pallets-eco/croniter"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "croniter",
+      "purl": "pkg:pypi/croniter@6.2.4",
+      "type": "library",
+      "version": "6.2.4"
+    },
+    {
+      "bom-ref": "BomRef.3473037064262384.34272114440831847",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://cryptography.io/en/latest/changelog/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-3-Clause"
+        }
+      ],
+      "name": "cryptography",
+      "purl": "pkg:pypi/cryptography@50.0.0",
+      "type": "library",
+      "version": "50.0.0"
+    },
+    {
+      "bom-ref": "BomRef.11151768851347799.4254454793152632",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://matplotlib.org/cycler/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "cycler",
+      "purl": "pkg:pypi/cycler@0.12.1",
+      "type": "library",
+      "version": "0.12.1"
+    },
+    {
+      "bom-ref": "BomRef.668646911129469.7604191877591732",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tiran/defusedxml"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "defusedxml",
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "type": "library",
+      "version": "0.7.1"
+    },
+    {
+      "bom-ref": "BomRef.2837274016457967.6226393103874084",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-distro/distro"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "distro",
+      "purl": "pkg:pypi/distro@1.9.0",
+      "type": "library",
+      "version": "1.9.0"
+    },
+    {
+      "bom-ref": "BomRef.6138654356575194.8812897151768657",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rr-/docstring_parser"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "docstring_parser",
+      "purl": "pkg:pypi/docstring-parser@0.18.0",
+      "type": "library",
+      "version": "0.18.0"
+    },
+    {
+      "bom-ref": "BomRef.0707172439206396.6164002464050067",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://foss.heptapod.net/openpyxl/et_xmlfile"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "et_xmlfile",
+      "purl": "pkg:pypi/et-xmlfile@2.0.0",
+      "type": "library",
+      "version": "2.0.0"
+    },
+    {
+      "bom-ref": "BomRef.5143429369208419.7774119590055738",
       "externalReferences": [
         {
           "type": "website",
@@ -165,7 +687,97 @@
       "version": "0.141.1"
     },
     {
-      "bom-ref": "BomRef.7636238232778236.05241543010317551",
+      "bom-ref": "BomRef.6771127434883436.273646363567836",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://google.github.io/flatbuffers/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "flatbuffers",
+      "purl": "pkg:pypi/flatbuffers@25.12.19",
+      "type": "library",
+      "version": "25.12.19"
+    },
+    {
+      "bom-ref": "BomRef.2917530957150527.21220666149518252",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://github.com/fonttools/fonttools"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "fonttools",
+      "purl": "pkg:pypi/fonttools@4.63.0",
+      "type": "library",
+      "version": "4.63.0"
+    },
+    {
+      "bom-ref": "BomRef.47049949403169744.4597534484041982",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "google-auth",
+      "purl": "pkg:pypi/google-auth@2.56.3",
+      "type": "library",
+      "version": "2.56.3"
+    },
+    {
+      "bom-ref": "BomRef.14968227158565317.6430435092970421",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/googleapis/python-genai"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "google-genai",
+      "purl": "pkg:pypi/google-genai@1.75.0",
+      "type": "library",
+      "version": "1.75.0"
+    },
+    {
+      "bom-ref": "BomRef.5734452604781344.8236216493024018",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://greenlet.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT AND PSF-2.0"
+        }
+      ],
+      "name": "greenlet",
+      "purl": "pkg:pypi/greenlet@3.5.5",
+      "type": "library",
+      "version": "3.5.5"
+    },
+    {
+      "bom-ref": "BomRef.10584265498752465.24498708581351447",
       "externalReferences": [
         {
           "type": "website",
@@ -183,7 +795,25 @@
       "version": "0.16.0"
     },
     {
-      "bom-ref": "BomRef.628603297500662.28426231927271706",
+      "bom-ref": "BomRef.21192593857656128.141153581347774",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Alir3z4/html2text/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "GPL-3.0-or-later"
+        }
+      ],
+      "name": "html2text",
+      "purl": "pkg:pypi/html2text@2025.4.15",
+      "type": "library",
+      "version": "2025.4.15"
+    },
+    {
+      "bom-ref": "BomRef.8130587093950503.10153607555094424",
       "externalReferences": [
         {
           "type": "website",
@@ -201,7 +831,7 @@
       "version": "1.0.9"
     },
     {
-      "bom-ref": "BomRef.6591663074036674.26095155766330735",
+      "bom-ref": "BomRef.9686820707653475.9595389073575463",
       "externalReferences": [
         {
           "type": "website",
@@ -219,7 +849,7 @@
       "version": "0.8.0"
     },
     {
-      "bom-ref": "BomRef.8684541557603211.8153259008029142",
+      "bom-ref": "BomRef.39707964620773495.8467772226138751",
       "externalReferences": [
         {
           "type": "website",
@@ -237,7 +867,43 @@
       "version": "0.28.1"
     },
     {
-      "bom-ref": "BomRef.21238974617131068.16593718789215894",
+      "bom-ref": "BomRef.9562968356093434.6905613790108343",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/florimondmanca/httpx-sse"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "httpx-sse",
+      "purl": "pkg:pypi/httpx-sse@0.4.3",
+      "type": "library",
+      "version": "0.4.3"
+    },
+    {
+      "bom-ref": "BomRef.5406758005647453.9862965097366754",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://humanfriendly.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "humanfriendly",
+      "purl": "pkg:pypi/humanfriendly@10.0",
+      "type": "library",
+      "version": "10.0"
+    },
+    {
+      "bom-ref": "BomRef.9106566365981861.1384697611122545",
       "externalReferences": [
         {
           "type": "website",
@@ -255,11 +921,47 @@
       "version": "3.18"
     },
     {
-      "bom-ref": "BomRef.043963453452256385.8586411134987099",
+      "bom-ref": "BomRef.024737917038145207.7072148298707374",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://github.com/pytest-dev/iniconfig"
+          "url": "https://github.com/imageio/imageio-ffmpeg"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "imageio-ffmpeg",
+      "purl": "pkg:pypi/imageio-ffmpeg@0.6.0",
+      "type": "library",
+      "version": "0.6.0"
+    },
+    {
+      "bom-ref": "BomRef.29287015106673076.850561065284517",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/gweis/isodate/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "isodate",
+      "purl": "pkg:pypi/isodate@0.7.2",
+      "type": "library",
+      "version": "0.7.2"
+    },
+    {
+      "bom-ref": "BomRef.6855693093702317.10857393678194316",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pydantic/jiter/"
         }
       ],
       "licenses": [
@@ -267,25 +969,607 @@
           "expression": "MIT"
         }
       ],
-      "name": "iniconfig",
-      "purl": "pkg:pypi/iniconfig@2.3.0",
+      "name": "jiter",
+      "purl": "pkg:pypi/jiter@0.16.0",
       "type": "library",
-      "version": "2.3.0"
+      "version": "0.16.0"
     },
     {
-      "bom-ref": "BomRef.24609939472250542.9322673392525587",
+      "bom-ref": "BomRef.4176536855830877.4487223942836872",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://joblib.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "joblib",
+      "purl": "pkg:pypi/joblib@1.5.3",
+      "type": "library",
+      "version": "1.5.3"
+    },
+    {
+      "bom-ref": "BomRef.4667531806345264.7744141346819773",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/richard-gyiko/json-schema-to-pydantic"
+        }
+      ],
       "licenses": [
         {
           "expression": "MIT"
         }
       ],
-      "name": "pluggy",
-      "purl": "pkg:pypi/pluggy@1.6.0",
+      "name": "json-schema-to-pydantic",
+      "purl": "pkg:pypi/json-schema-to-pydantic@0.4.11",
       "type": "library",
-      "version": "1.6.0"
+      "version": "0.4.11"
     },
     {
-      "bom-ref": "BomRef.5150640439244117.4599345225359388",
+      "bom-ref": "BomRef.43556410056987716.8820928262790733",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jsonref.readthedocs.io/en/latest/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "jsonref",
+      "purl": "pkg:pypi/jsonref@1.1.0",
+      "type": "library",
+      "version": "1.1.0"
+    },
+    {
+      "bom-ref": "BomRef.740227710407873.45920124699722875",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-jsonschema/jsonschema"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "jsonschema",
+      "purl": "pkg:pypi/jsonschema@4.26.0",
+      "type": "library",
+      "version": "4.26.0"
+    },
+    {
+      "bom-ref": "BomRef.16468633744853023.5331380872057556",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://jsonschema-specifications.readthedocs.io/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "jsonschema-specifications",
+      "purl": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "type": "library",
+      "version": "2025.9.1"
+    },
+    {
+      "bom-ref": "BomRef.5115830326989994.442272428426598",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/nucleic/kiwi"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "kiwisolver",
+      "purl": "pkg:pypi/kiwisolver@1.5.0",
+      "type": "library",
+      "version": "1.5.0"
+    },
+    {
+      "bom-ref": "BomRef.459086371767071.33370863617360835",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "loguru",
+      "purl": "pkg:pypi/loguru@0.7.3",
+      "type": "library",
+      "version": "0.7.3"
+    },
+    {
+      "bom-ref": "BomRef.5363576317345723.521805847603122",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://lxml.de/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "lxml",
+      "purl": "pkg:pypi/lxml@6.1.1",
+      "type": "library",
+      "version": "6.1.1"
+    },
+    {
+      "bom-ref": "BomRef.662900538039535.08003570488607326",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://securityresearch.google/magika"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "magika",
+      "purl": "pkg:pypi/magika@0.6.3",
+      "type": "library",
+      "version": "0.6.3"
+    },
+    {
+      "bom-ref": "BomRef.38390158306069244.23966367999719718",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/mwilliamson/python-mammoth"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "mammoth",
+      "purl": "pkg:pypi/mammoth@1.11.0",
+      "type": "library",
+      "version": "1.11.0"
+    },
+    {
+      "bom-ref": "BomRef.5148994129651792.9013828988303451",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://github.com/matthewwithanm/python-markdownify"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "markdownify",
+      "purl": "pkg:pypi/markdownify@1.2.3",
+      "type": "library",
+      "version": "1.2.3"
+    },
+    {
+      "bom-ref": "BomRef.035024093638850506.18939412249894716",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/markitdown#readme"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "markitdown",
+      "purl": "pkg:pypi/markitdown@0.1.5",
+      "type": "library",
+      "version": "0.1.5"
+    },
+    {
+      "bom-ref": "BomRef.9092066041426011.1359106572137001",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://matplotlib.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "matplotlib",
+      "purl": "pkg:pypi/matplotlib@3.11.1",
+      "type": "library",
+      "version": "3.11.1"
+    },
+    {
+      "bom-ref": "BomRef.6126078025089959.5382448128777512",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://modelcontextprotocol.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "mcp",
+      "purl": "pkg:pypi/mcp@1.29.0",
+      "type": "library",
+      "version": "1.29.0"
+    },
+    {
+      "bom-ref": "BomRef.6747530083825861.7264063593109944",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://mpmath.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "mpmath",
+      "purl": "pkg:pypi/mpmath@1.3.0",
+      "type": "library",
+      "version": "1.3.0"
+    },
+    {
+      "bom-ref": "BomRef.1811995878363052.6506309860755238",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "msal",
+      "purl": "pkg:pypi/msal@1.37.0",
+      "type": "library",
+      "version": "1.37.0"
+    },
+    {
+      "bom-ref": "BomRef.7376245774873972.5150064420418442",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/AzureAD/microsoft-authentication-extensions-for-python/releases"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "msal-extensions",
+      "purl": "pkg:pypi/msal-extensions@1.3.1",
+      "type": "library",
+      "version": "1.3.1"
+    },
+    {
+      "bom-ref": "BomRef.9453507084219386.7133649195918478",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/narwhals-dev/narwhals"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "narwhals",
+      "purl": "pkg:pypi/narwhals@2.24.0",
+      "type": "library",
+      "version": "2.24.0"
+    },
+    {
+      "bom-ref": "BomRef.29192883686117144.5651808621712227",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://numpy.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+        }
+      ],
+      "name": "numpy",
+      "purl": "pkg:pypi/numpy@2.5.2",
+      "type": "library",
+      "version": "2.5.2"
+    },
+    {
+      "bom-ref": "BomRef.9636418048400943.29563112565051397",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.decalage.info/python/olefileio"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "olefile",
+      "purl": "pkg:pypi/olefile@0.47",
+      "type": "library",
+      "version": "0.47"
+    },
+    {
+      "bom-ref": "BomRef.4457188135779865.4948421049339804",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://onnxruntime.ai"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "onnxruntime",
+      "purl": "pkg:pypi/onnxruntime@1.20.1",
+      "type": "library",
+      "version": "1.20.1"
+    },
+    {
+      "bom-ref": "BomRef.7725575995059472.4590600162815123",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/openai/openai-python"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "openai",
+      "purl": "pkg:pypi/openai@2.54.0",
+      "type": "library",
+      "version": "2.54.0"
+    },
+    {
+      "bom-ref": "BomRef.5319295035528238.5014099463658056",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://openpyxl.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "openpyxl",
+      "purl": "pkg:pypi/openpyxl@3.1.5",
+      "type": "library",
+      "version": "3.1.5"
+    },
+    {
+      "bom-ref": "BomRef.7709142531196863.6321247306232008",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "opentelemetry-api",
+      "purl": "pkg:pypi/opentelemetry-api@1.44.0",
+      "type": "library",
+      "version": "1.44.0"
+    },
+    {
+      "bom-ref": "BomRef.4595548942770511.5672243442286415",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pandas.pydata.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "pandas",
+      "purl": "pkg:pypi/pandas@2.3.3",
+      "type": "library",
+      "version": "2.3.3"
+    },
+    {
+      "bom-ref": "BomRef.6554225823646759.9189017482487557",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pdfminer/pdfminer.six"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pdfminer.six",
+      "purl": "pkg:pypi/pdfminer-six@20251230",
+      "type": "library",
+      "version": "20251230"
+    },
+    {
+      "bom-ref": "BomRef.40435989256219407.16209796808280896",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jsvine/pdfplumber"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pdfplumber",
+      "purl": "pkg:pypi/pdfplumber@0.11.9",
+      "type": "library",
+      "version": "0.11.9"
+    },
+    {
+      "bom-ref": "BomRef.6490978922800448.35731084820800174",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT-CMU"
+        }
+      ],
+      "name": "pillow",
+      "purl": "pkg:pypi/pillow@12.3.0",
+      "type": "library",
+      "version": "12.3.0"
+    },
+    {
+      "bom-ref": "BomRef.2114129316852359.2805782175849274",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Microsoft/playwright-python"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "playwright",
+      "purl": "pkg:pypi/playwright@1.62.0",
+      "type": "library",
+      "version": "1.62.0"
+    },
+    {
+      "bom-ref": "BomRef.6759102676478977.7653544369569714",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://developers.google.com/protocol-buffers/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "3-Clause BSD License"
+        }
+      ],
+      "name": "protobuf",
+      "purl": "pkg:pypi/protobuf@5.29.6",
+      "type": "library",
+      "version": "5.29.6"
+    },
+    {
+      "bom-ref": "BomRef.17955406165514032.6524756149855194",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pyasn1/pyasn1"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-2-Clause"
+        }
+      ],
+      "name": "pyasn1",
+      "purl": "pkg:pypi/pyasn1@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "bom-ref": "BomRef.7631096462199347.028749699138490015",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pyasn1/pyasn1-modules"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "pyasn1_modules",
+      "purl": "pkg:pypi/pyasn1-modules@0.4.2",
+      "type": "library",
+      "version": "0.4.2"
+    },
+    {
+      "bom-ref": "BomRef.729560241150888.027090905941925425",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/eliben/pycparser"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "pycparser",
+      "purl": "pkg:pypi/pycparser@3.0",
+      "type": "library",
+      "version": "3.0"
+    },
+    {
+      "bom-ref": "BomRef.1227438329442625.7237304150728493",
       "externalReferences": [
         {
           "type": "website",
@@ -303,7 +1587,25 @@
       "version": "2.13.4"
     },
     {
-      "bom-ref": "BomRef.9350275704180611.4555471618985144",
+      "bom-ref": "BomRef.015655991557755877.507294671278339",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pydantic/pydantic-settings"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pydantic-settings",
+      "purl": "pkg:pypi/pydantic-settings@2.15.0",
+      "type": "library",
+      "version": "2.15.0"
+    },
+    {
+      "bom-ref": "BomRef.8057110769677921.6981446418339798",
       "externalReferences": [
         {
           "type": "website",
@@ -321,11 +1623,11 @@
       "version": "2.46.4"
     },
     {
-      "bom-ref": "BomRef.15596033722384628.908668010880171",
+      "bom-ref": "BomRef.18300689231922185.7449256373316189",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://docs.pytest.org/en/stable/changelog.html"
+          "url": "http://pydub.com"
         }
       ],
       "licenses": [
@@ -333,13 +1635,103 @@
           "expression": "MIT"
         }
       ],
-      "name": "pytest",
-      "purl": "pkg:pypi/pytest@9.0.3",
+      "name": "pydub",
+      "purl": "pkg:pypi/pydub@0.25.1",
       "type": "library",
-      "version": "9.0.3"
+      "version": "0.25.1"
     },
     {
-      "bom-ref": "BomRef.207549571529412.4824409200991403",
+      "bom-ref": "BomRef.5110961564319615.07352055153135728",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jfhbrook/pyee"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pyee",
+      "purl": "pkg:pypi/pyee@13.0.1",
+      "type": "library",
+      "version": "13.0.1"
+    },
+    {
+      "bom-ref": "BomRef.19555868182211655.9840174214175087",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pyparsing-docs.readthedocs.io/en/latest/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pyparsing",
+      "purl": "pkg:pypi/pyparsing@3.3.2",
+      "type": "library",
+      "version": "3.3.2"
+    },
+    {
+      "bom-ref": "BomRef.6758282478345063.30054579487986877",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pypdfium2-team/pypdfium2"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause, Apache-2.0, dependency licenses"
+        }
+      ],
+      "name": "pypdfium2",
+      "purl": "pkg:pypi/pypdfium2@5.13.0",
+      "type": "library",
+      "version": "5.13.0"
+    },
+    {
+      "bom-ref": "BomRef.7692919367157582.9723889234997916",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pyreadline3/pyreadline3"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "pyreadline3",
+      "purl": "pkg:pypi/pyreadline3@3.5.6",
+      "type": "library",
+      "version": "3.5.6"
+    },
+    {
+      "bom-ref": "BomRef.6770589790664643.29734689015025406",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dateutil/dateutil"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "python-dateutil",
+      "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "type": "library",
+      "version": "2.9.0.post0"
+    },
+    {
+      "bom-ref": "BomRef.5495812699703606.5191124372854411",
       "externalReferences": [
         {
           "type": "website",
@@ -357,7 +1749,295 @@
       "version": "1.2.3"
     },
     {
-      "bom-ref": "BomRef.46185374493022546.6002752723694037",
+      "bom-ref": "BomRef.318423731944647.790777812270619",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Kludex/python-multipart"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "python-multipart",
+      "purl": "pkg:pypi/python-multipart@0.0.32",
+      "type": "library",
+      "version": "0.0.32"
+    },
+    {
+      "bom-ref": "BomRef.20903715915989407.8372007161471985",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/scanny/python-pptx/blob/master/HISTORY.rst"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "python-pptx",
+      "purl": "pkg:pypi/python-pptx@1.0.2",
+      "type": "library",
+      "version": "1.0.2"
+    },
+    {
+      "bom-ref": "BomRef.3257262138135908.8903487992923186",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://pythonhosted.org/pytz"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "pytz",
+      "purl": "pkg:pypi/pytz@2026.3.post1",
+      "type": "library",
+      "version": "2026.3.post1"
+    },
+    {
+      "bom-ref": "BomRef.8429241493233933.9255699678736401",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/mhammond/pywin32"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "pywin32",
+      "purl": "pkg:pypi/pywin32@312",
+      "type": "library",
+      "version": "312"
+    },
+    {
+      "bom-ref": "BomRef.8806603948920747.08557854734394543",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://referencing.readthedocs.io/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "referencing",
+      "purl": "pkg:pypi/referencing@0.37.0",
+      "type": "library",
+      "version": "0.37.0"
+    },
+    {
+      "bom-ref": "BomRef.8133216365387552.500418261233513",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/mrabarnett/mrab-regex"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 AND CNRI-Python"
+        }
+      ],
+      "name": "regex",
+      "purl": "pkg:pypi/regex@2026.7.19",
+      "type": "library",
+      "version": "2026.7.19"
+    },
+    {
+      "bom-ref": "BomRef.9039757902504725.2506672897457609",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://requests.readthedocs.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "requests",
+      "purl": "pkg:pypi/requests@2.34.2",
+      "type": "library",
+      "version": "2.34.2"
+    },
+    {
+      "bom-ref": "BomRef.9544162629716474.9278655709392762",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://rpds.readthedocs.io/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "rpds-py",
+      "purl": "pkg:pypi/rpds-py@2026.6.3",
+      "type": "library",
+      "version": "2026.6.3"
+    },
+    {
+      "bom-ref": "BomRef.12658115745408893.707881805526671",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://scikit-learn.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "scikit-learn",
+      "purl": "pkg:pypi/scikit-learn@1.9.0",
+      "type": "library",
+      "version": "1.9.0"
+    },
+    {
+      "bom-ref": "BomRef.18863556974261064.5800312726583653",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://scipy.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "scipy",
+      "purl": "pkg:pypi/scipy@1.18.0",
+      "type": "library",
+      "version": "1.18.0"
+    },
+    {
+      "bom-ref": "BomRef.7427754790649144.3627506208002851",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://seaborn.pydata.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "seaborn",
+      "purl": "pkg:pypi/seaborn@0.13.2",
+      "type": "library",
+      "version": "0.13.2"
+    },
+    {
+      "bom-ref": "BomRef.4069981656104513.20100247808154992",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/benjaminp/six"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "six",
+      "purl": "pkg:pypi/six@1.17.0",
+      "type": "library",
+      "version": "1.17.0"
+    },
+    {
+      "bom-ref": "BomRef.844637975386634.2362724328526884",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-trio/sniffio"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "sniffio",
+      "purl": "pkg:pypi/sniffio@1.3.1",
+      "type": "library",
+      "version": "1.3.1"
+    },
+    {
+      "bom-ref": "BomRef.2946167856129627.047195035944297414",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/facelessuser/soupsieve"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "soupsieve",
+      "purl": "pkg:pypi/soupsieve@2.9.2",
+      "type": "library",
+      "version": "2.9.2"
+    },
+    {
+      "bom-ref": "BomRef.5101922694366097.8671124862565075",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/fastapi/sqlmodel"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "sqlmodel",
+      "purl": "pkg:pypi/sqlmodel@0.0.39",
+      "type": "library",
+      "version": "0.0.39"
+    },
+    {
+      "bom-ref": "BomRef.39568912163389314.026769014191604157",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/sysid/sse-starlette"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "sse-starlette",
+      "purl": "pkg:pypi/sse-starlette@3.4.8",
+      "type": "library",
+      "version": "3.4.8"
+    },
+    {
+      "bom-ref": "BomRef.2027027858364563.4219419213437391",
       "externalReferences": [
         {
           "type": "website",
@@ -375,7 +2055,97 @@
       "version": "1.6.0"
     },
     {
-      "bom-ref": "BomRef.9043756964652548.038816929469374095",
+      "bom-ref": "BomRef.5716308288609523.6453330400353466",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://sympy.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "sympy",
+      "purl": "pkg:pypi/sympy@1.14.0",
+      "type": "library",
+      "version": "1.14.0"
+    },
+    {
+      "bom-ref": "BomRef.16094649342096667.5435074343933421",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jd/tenacity"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "tenacity",
+      "purl": "pkg:pypi/tenacity@9.1.4",
+      "type": "library",
+      "version": "9.1.4"
+    },
+    {
+      "bom-ref": "BomRef.963351684862827.6017222895209084",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/joblib/threadpoolctl"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ],
+      "name": "threadpoolctl",
+      "purl": "pkg:pypi/threadpoolctl@3.6.0",
+      "type": "library",
+      "version": "3.6.0"
+    },
+    {
+      "bom-ref": "BomRef.884133480005804.36530728713932015",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/openai/tiktoken"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "NOASSERTION"
+        }
+      ],
+      "name": "tiktoken",
+      "purl": "pkg:pypi/tiktoken@0.14.0",
+      "type": "library",
+      "version": "0.14.0"
+    },
+    {
+      "bom-ref": "BomRef.15013239384567412.06259993202570824",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://tqdm.github.io"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MPL-2.0 AND MIT"
+        }
+      ],
+      "name": "tqdm",
+      "purl": "pkg:pypi/tqdm@4.70.0",
+      "type": "library",
+      "version": "4.70.0"
+    },
+    {
+      "bom-ref": "BomRef.6398744551607698.08038367948340519",
       "externalReferences": [
         {
           "type": "website",
@@ -393,7 +2163,7 @@
       "version": "0.4.4"
     },
     {
-      "bom-ref": "BomRef.5218551066130633.7761928518988508",
+      "bom-ref": "BomRef.7135908364889466.22158440285824865",
       "externalReferences": [
         {
           "type": "website",
@@ -411,7 +2181,43 @@
       "version": "4.16.0"
     },
     {
-      "bom-ref": "BomRef.7407157112312661.8267709960247689",
+      "bom-ref": "BomRef.38597083732279924.7383245152500407",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python/tzdata"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "tzdata",
+      "purl": "pkg:pypi/tzdata@2026.3",
+      "type": "library",
+      "version": "2026.3"
+    },
+    {
+      "bom-ref": "BomRef.5430583702855466.7347798088830585",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/urllib3/urllib3/blob/main/CHANGES.rst"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ],
+      "name": "urllib3",
+      "purl": "pkg:pypi/urllib3@2.7.0",
+      "type": "library",
+      "version": "2.7.0"
+    },
+    {
+      "bom-ref": "BomRef.7523179953666845.4288385940612601",
       "externalReferences": [
         {
           "type": "website",
@@ -429,7 +2235,7 @@
       "version": "0.52.3"
     },
     {
-      "bom-ref": "BomRef.9870292802392362.9905415197234619",
+      "bom-ref": "BomRef.7835181211665085.05128281821276082",
       "externalReferences": [
         {
           "type": "website",
@@ -447,7 +2253,25 @@
       "version": "1.2.0"
     },
     {
-      "bom-ref": "BomRef.8484137294574849.5501462394599881",
+      "bom-ref": "BomRef.4617125776092781.6697153846955579",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/websocket-client/websocket-client.git"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "websocket-client",
+      "purl": "pkg:pypi/websocket-client@1.9.0",
+      "type": "library",
+      "version": "1.9.0"
+    },
+    {
+      "bom-ref": "BomRef.45012639438835844.7821767280469223",
       "externalReferences": [
         {
           "type": "website",
@@ -460,77 +2284,81 @@
         }
       ],
       "name": "websockets",
-      "purl": "pkg:pypi/websockets@17.0.1",
+      "purl": "pkg:pypi/websockets@16.1.1",
       "type": "library",
-      "version": "17.0.1"
+      "version": "16.1.1"
     },
     {
+      "bom-ref": "BomRef.5668570620091983.5316219155480871",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://packaging.pypa.io/"
+          "url": "https://github.com/Delgan/win32-setctime"
         }
       ],
       "licenses": [
         {
-          "expression": "Apache-2.0 OR BSD-2-Clause"
+          "expression": "MIT"
         }
       ],
-      "name": "packaging",
-      "purl": "pkg:pypi/packaging@26.3",
+      "name": "win32_setctime",
+      "purl": "pkg:pypi/win32-setctime@1.2.0",
       "type": "library",
-      "version": "26.3"
+      "version": "1.2.0"
     },
     {
+      "bom-ref": "BomRef.1446231394447529.6742184025577621",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://pyinstaller.org"
+          "url": "http://www.python-excel.org/"
         }
       ],
       "licenses": [
         {
-          "expression": "GPL-2.0-or-later WITH Bootloader-exception"
+          "expression": "BSD-3-Clause"
         }
       ],
-      "name": "pyinstaller",
-      "purl": "pkg:pypi/pyinstaller@6.21.0",
+      "name": "xlrd",
+      "purl": "pkg:pypi/xlrd@2.0.2",
       "type": "library",
-      "version": "6.21.0"
+      "version": "2.0.2"
     },
     {
+      "bom-ref": "BomRef.3711610485814163.7786465842138061",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://www.python.org/"
+          "url": "https://github.com/jmcnamara/XlsxWriter"
         }
       ],
       "licenses": [
         {
-          "expression": "PSF-2.0"
+          "expression": "BSD-3-Clause"
         }
       ],
-      "name": "CPython",
-      "purl": "pkg:generic/cpython@3.13.2",
-      "type": "platform",
-      "version": "3.13.2"
+      "name": "xlsxwriter",
+      "purl": "pkg:pypi/xlsxwriter@3.2.9",
+      "type": "library",
+      "version": "3.2.9"
     },
     {
+      "bom-ref": "BomRef.23169641121613216.9225920898754406",
       "externalReferences": [
         {
           "type": "website",
-          "url": "https://www.openssl.org/"
+          "url": "https://github.com/jdepoix/youtube-transcript-api"
         }
       ],
       "licenses": [
         {
-          "expression": "Apache-2.0"
+          "expression": "MIT"
         }
       ],
-      "name": "OpenSSL",
-      "purl": "pkg:generic/openssl@3.0.15",
+      "name": "youtube-transcript-api",
+      "purl": "pkg:pypi/youtube-transcript-api@1.0.3",
       "type": "library",
-      "version": "3.0.15"
+      "version": "1.0.3"
     },
     {
       "externalReferences": [
@@ -553,6 +2381,23 @@
       "externalReferences": [
         {
           "type": "website",
+          "url": "https://packaging.pypa.io/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ],
+      "name": "packaging",
+      "purl": "pkg:pypi/packaging@26.3",
+      "type": "library",
+      "version": "26.3"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
           "url": "https://github.com/erocarrera/pefile"
         }
       ],
@@ -565,6 +2410,23 @@
       "purl": "pkg:pypi/pefile@2024.8.26",
       "type": "library",
       "version": "2024.8.26"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pyinstaller.org"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "GPL-2.0-or-later WITH Bootloader-exception"
+        }
+      ],
+      "name": "pyinstaller",
+      "purl": "pkg:pypi/pyinstaller@6.21.0",
+      "type": "library",
+      "version": "6.21.0"
     },
     {
       "externalReferences": [
@@ -616,92 +2478,495 @@
       "purl": "pkg:pypi/setuptools@84.0.0",
       "type": "library",
       "version": "84.0.0"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.python.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "CPython",
+      "purl": "pkg:generic/cpython@3.13.2",
+      "type": "platform",
+      "version": "3.13.2"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.openssl.org/"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "name": "OpenSSL",
+      "purl": "pkg:generic/openssl@3.0.15",
+      "type": "library",
+      "version": "3.0.15"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/AbstractUmbra/audioop"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "audioop-lts",
+      "purl": "pkg:pypi/audioop-lts@0.2.2",
+      "type": "library",
+      "version": "0.2.2"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/youknowone/python-deadlib"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "standard-aifc",
+      "purl": "pkg:pypi/standard-aifc@3.13.0",
+      "type": "library",
+      "version": "3.13.0"
+    },
+    {
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/youknowone/python-deadlib"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ],
+      "name": "standard-chunk",
+      "purl": "pkg:pypi/standard-chunk@3.13.0",
+      "type": "library",
+      "version": "3.13.0"
     }
   ],
   "dependencies": [
     {
-      "ref": "BomRef.03283627798204203.39230228286911106"
+      "ref": "BomRef.015655991557755877.507294671278339"
     },
     {
-      "ref": "BomRef.043963453452256385.8586411134987099"
+      "ref": "BomRef.024737917038145207.7072148298707374"
     },
     {
-      "ref": "BomRef.1235689926616611.5386844963525439"
+      "ref": "BomRef.03488820484596966.8428137703979517"
     },
     {
-      "ref": "BomRef.15596033722384628.908668010880171"
+      "ref": "BomRef.035024093638850506.18939412249894716"
     },
     {
-      "ref": "BomRef.181369199287995.19156704233003619"
+      "ref": "BomRef.04379609282070274.6119388311805434"
     },
     {
-      "ref": "BomRef.207549571529412.4824409200991403"
+      "ref": "BomRef.04630676805650513.16106953325457773"
     },
     {
-      "ref": "BomRef.21238974617131068.16593718789215894"
+      "ref": "BomRef.0707172439206396.6164002464050067"
     },
     {
-      "ref": "BomRef.24609939472250542.9322673392525587"
+      "ref": "BomRef.1055857082689623.8887697627376562"
     },
     {
-      "ref": "BomRef.37782777244796617.4796590086003192"
+      "ref": "BomRef.10584265498752465.24498708581351447"
     },
     {
-      "ref": "BomRef.46185374493022546.6002752723694037"
+      "ref": "BomRef.11151768851347799.4254454793152632"
     },
     {
-      "ref": "BomRef.5150640439244117.4599345225359388"
+      "ref": "BomRef.1227438329442625.7237304150728493"
     },
     {
-      "ref": "BomRef.5218551066130633.7761928518988508"
+      "ref": "BomRef.12658115745408893.707881805526671"
     },
     {
-      "ref": "BomRef.5357714280596307.6710830011496007"
+      "ref": "BomRef.1346674095673126.03129973189309099"
     },
     {
-      "ref": "BomRef.628603297500662.28426231927271706"
+      "ref": "BomRef.1446231394447529.6742184025577621"
     },
     {
-      "ref": "BomRef.6591663074036674.26095155766330735"
+      "ref": "BomRef.14968227158565317.6430435092970421"
     },
     {
-      "ref": "BomRef.7353951789982489.045840585353284946"
+      "ref": "BomRef.15013239384567412.06259993202570824"
     },
     {
-      "ref": "BomRef.7407157112312661.8267709960247689"
+      "ref": "BomRef.16094649342096667.5435074343933421"
     },
     {
-      "ref": "BomRef.7636238232778236.05241543010317551"
+      "ref": "BomRef.16468633744853023.5331380872057556"
     },
     {
-      "ref": "BomRef.7700871223604324.6339272840290954"
+      "ref": "BomRef.16842694512060752.9341521412851407"
     },
     {
-      "ref": "BomRef.7918608329060963.4708196873666183"
+      "ref": "BomRef.17955406165514032.6524756149855194"
     },
     {
-      "ref": "BomRef.8484137294574849.5501462394599881"
+      "ref": "BomRef.1811995878363052.6506309860755238"
     },
     {
-      "ref": "BomRef.8684541557603211.8153259008029142"
+      "ref": "BomRef.18300689231922185.7449256373316189"
     },
     {
-      "ref": "BomRef.8722778005043538.9655566377122737"
+      "ref": "BomRef.1858077793421088.01866496552135799"
     },
     {
-      "ref": "BomRef.9043756964652548.038816929469374095"
+      "ref": "BomRef.18863556974261064.5800312726583653"
     },
     {
-      "ref": "BomRef.9350275704180611.4555471618985144"
+      "ref": "BomRef.19555868182211655.9840174214175087"
     },
     {
-      "ref": "BomRef.9870292802392362.9905415197234619"
+      "ref": "BomRef.2027027858364563.4219419213437391"
+    },
+    {
+      "ref": "BomRef.20903715915989407.8372007161471985"
+    },
+    {
+      "ref": "BomRef.2114129316852359.2805782175849274"
+    },
+    {
+      "ref": "BomRef.21192593857656128.141153581347774"
+    },
+    {
+      "ref": "BomRef.21413786201941887.2366143998461292"
+    },
+    {
+      "ref": "BomRef.22067013825648696.3947818348277701"
+    },
+    {
+      "ref": "BomRef.23042029673185582.3349400426219532"
+    },
+    {
+      "ref": "BomRef.23169641121613216.9225920898754406"
+    },
+    {
+      "ref": "BomRef.2637443298039861.4600396635727684"
+    },
+    {
+      "ref": "BomRef.2837274016457967.6226393103874084"
+    },
+    {
+      "ref": "BomRef.28517484048712993.38493623202048244"
+    },
+    {
+      "ref": "BomRef.2897064358590322.7536748045323607"
+    },
+    {
+      "ref": "BomRef.2917530957150527.21220666149518252"
+    },
+    {
+      "ref": "BomRef.29192883686117144.5651808621712227"
+    },
+    {
+      "ref": "BomRef.29287015106673076.850561065284517"
+    },
+    {
+      "ref": "BomRef.2946167856129627.047195035944297414"
+    },
+    {
+      "ref": "BomRef.318423731944647.790777812270619"
+    },
+    {
+      "ref": "BomRef.3257262138135908.8903487992923186"
+    },
+    {
+      "ref": "BomRef.3389990287136847.8384706872067506"
+    },
+    {
+      "ref": "BomRef.3473037064262384.34272114440831847"
+    },
+    {
+      "ref": "BomRef.3711610485814163.7786465842138061"
+    },
+    {
+      "ref": "BomRef.38390158306069244.23966367999719718"
+    },
+    {
+      "ref": "BomRef.38597083732279924.7383245152500407"
+    },
+    {
+      "ref": "BomRef.39568912163389314.026769014191604157"
+    },
+    {
+      "ref": "BomRef.39707964620773495.8467772226138751"
+    },
+    {
+      "ref": "BomRef.40435989256219407.16209796808280896"
+    },
+    {
+      "ref": "BomRef.4069981656104513.20100247808154992"
+    },
+    {
+      "ref": "BomRef.41320373385228004.709092818772471"
+    },
+    {
+      "ref": "BomRef.4176536855830877.4487223942836872"
+    },
+    {
+      "ref": "BomRef.43556410056987716.8820928262790733"
+    },
+    {
+      "ref": "BomRef.4357201254107276.3901474103126624"
+    },
+    {
+      "ref": "BomRef.4457188135779865.4948421049339804"
+    },
+    {
+      "ref": "BomRef.45012639438835844.7821767280469223"
+    },
+    {
+      "ref": "BomRef.459086371767071.33370863617360835"
+    },
+    {
+      "ref": "BomRef.4595548942770511.5672243442286415"
+    },
+    {
+      "ref": "BomRef.4617125776092781.6697153846955579"
+    },
+    {
+      "ref": "BomRef.4667531806345264.7744141346819773"
+    },
+    {
+      "ref": "BomRef.47049949403169744.4597534484041982"
+    },
+    {
+      "ref": "BomRef.5101922694366097.8671124862565075"
+    },
+    {
+      "ref": "BomRef.5110961564319615.07352055153135728"
+    },
+    {
+      "ref": "BomRef.5115830326989994.442272428426598"
+    },
+    {
+      "ref": "BomRef.5143429369208419.7774119590055738"
+    },
+    {
+      "ref": "BomRef.5148994129651792.9013828988303451"
+    },
+    {
+      "ref": "BomRef.5319295035528238.5014099463658056"
+    },
+    {
+      "ref": "BomRef.5363576317345723.521805847603122"
+    },
+    {
+      "ref": "BomRef.5406758005647453.9862965097366754"
+    },
+    {
+      "ref": "BomRef.5430583702855466.7347798088830585"
+    },
+    {
+      "ref": "BomRef.5468967090497336.031216326877978928"
+    },
+    {
+      "ref": "BomRef.5495812699703606.5191124372854411"
+    },
+    {
+      "ref": "BomRef.559516903629993.2036030787510641"
+    },
+    {
+      "ref": "BomRef.5668570620091983.5316219155480871"
+    },
+    {
+      "ref": "BomRef.5716308288609523.6453330400353466"
+    },
+    {
+      "ref": "BomRef.5734452604781344.8236216493024018"
+    },
+    {
+      "ref": "BomRef.5793218295979481.638132487266555"
+    },
+    {
+      "ref": "BomRef.5987018554439074.3966312776703622"
+    },
+    {
+      "ref": "BomRef.6126078025089959.5382448128777512"
+    },
+    {
+      "ref": "BomRef.6138654356575194.8812897151768657"
+    },
+    {
+      "ref": "BomRef.6398744551607698.08038367948340519"
+    },
+    {
+      "ref": "BomRef.6490978922800448.35731084820800174"
+    },
+    {
+      "ref": "BomRef.6554225823646759.9189017482487557"
+    },
+    {
+      "ref": "BomRef.6579358764097275.29782383522233336"
+    },
+    {
+      "ref": "BomRef.662900538039535.08003570488607326"
+    },
+    {
+      "ref": "BomRef.668646911129469.7604191877591732"
+    },
+    {
+      "ref": "BomRef.6747530083825861.7264063593109944"
+    },
+    {
+      "ref": "BomRef.6758282478345063.30054579487986877"
+    },
+    {
+      "ref": "BomRef.6759102676478977.7653544369569714"
+    },
+    {
+      "ref": "BomRef.6770589790664643.29734689015025406"
+    },
+    {
+      "ref": "BomRef.6771127434883436.273646363567836"
+    },
+    {
+      "ref": "BomRef.6823627015496827.44123483023279775"
+    },
+    {
+      "ref": "BomRef.6855693093702317.10857393678194316"
+    },
+    {
+      "ref": "BomRef.6927824258128814.4838264439670502"
+    },
+    {
+      "ref": "BomRef.7022507721666803.2674495250282619"
+    },
+    {
+      "ref": "BomRef.7135908364889466.22158440285824865"
+    },
+    {
+      "ref": "BomRef.7159075804571207.14452580858696962"
+    },
+    {
+      "ref": "BomRef.729560241150888.027090905941925425"
+    },
+    {
+      "ref": "BomRef.7376245774873972.5150064420418442"
+    },
+    {
+      "ref": "BomRef.740227710407873.45920124699722875"
+    },
+    {
+      "ref": "BomRef.7427754790649144.3627506208002851"
+    },
+    {
+      "ref": "BomRef.7481848835459706.4369925182165014"
+    },
+    {
+      "ref": "BomRef.7523179953666845.4288385940612601"
+    },
+    {
+      "ref": "BomRef.7607008235156099.6652771296112886"
+    },
+    {
+      "ref": "BomRef.7631096462199347.028749699138490015"
+    },
+    {
+      "ref": "BomRef.7692919367157582.9723889234997916"
+    },
+    {
+      "ref": "BomRef.7709142531196863.6321247306232008"
+    },
+    {
+      "ref": "BomRef.7725575995059472.4590600162815123"
+    },
+    {
+      "ref": "BomRef.7835181211665085.05128281821276082"
+    },
+    {
+      "ref": "BomRef.8057110769677921.6981446418339798"
+    },
+    {
+      "ref": "BomRef.8130587093950503.10153607555094424"
+    },
+    {
+      "ref": "BomRef.8133216365387552.500418261233513"
+    },
+    {
+      "ref": "BomRef.8429241493233933.9255699678736401"
+    },
+    {
+      "ref": "BomRef.844637975386634.2362724328526884"
+    },
+    {
+      "ref": "BomRef.8548364268067808.8386596816359242"
+    },
+    {
+      "ref": "BomRef.8806603948920747.08557854734394543"
+    },
+    {
+      "ref": "BomRef.884133480005804.36530728713932015"
+    },
+    {
+      "ref": "BomRef.8942731259919421.7267505272785817"
+    },
+    {
+      "ref": "BomRef.9039757902504725.2506672897457609"
+    },
+    {
+      "ref": "BomRef.9092066041426011.1359106572137001"
+    },
+    {
+      "ref": "BomRef.9106566365981861.1384697611122545"
+    },
+    {
+      "ref": "BomRef.9374191116025348.8084663479869756"
+    },
+    {
+      "ref": "BomRef.9453507084219386.7133649195918478"
+    },
+    {
+      "ref": "BomRef.9544162629716474.9278655709392762"
+    },
+    {
+      "ref": "BomRef.9562968356093434.6905613790108343"
+    },
+    {
+      "ref": "BomRef.963351684862827.6017222895209084"
+    },
+    {
+      "ref": "BomRef.9636418048400943.29563112565051397"
+    },
+    {
+      "ref": "BomRef.9686820707653475.9595389073575463"
+    },
+    {
+      "ref": "BomRef.9884915904963562.2409420511532695"
+    },
+    {
+      "ref": "BomRef.9923284460658527.6683121734933717"
     }
   ],
   "metadata": {
-    "timestamp": "2026-08-17T17:24:05.432492+00:00"
+    "timestamp": "2026-08-18T03:00:44.311799+00:00"
   },
-  "serialNumber": "urn:uuid:b766a57d-e8ec-450a-862d-346da34e1ba5",
+  "serialNumber": "urn:uuid:d94fc5f9-3de2-4a79-9fba-446369afa6c6",
   "specVersion": "1.4",
   "version": 1
 }

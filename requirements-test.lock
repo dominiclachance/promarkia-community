@@ -1,0 +1,4 @@
+iniconfig==2.3.0
+pluggy==1.6.0
+Pygments==2.21.0
+pytest==9.0.3
