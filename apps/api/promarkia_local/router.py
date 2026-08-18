@@ -1,7 +1,9 @@
 import hashlib
+import ipaddress
 import json
 import mimetypes
 import os
+import socket
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -41,6 +43,40 @@ def now() -> datetime:
 
 def app_root() -> Path:
     return Path(os.getenv("AUTOGENSTUDIO_APPDIR", str(Path.home() / ".promarkia")))
+
+
+class _NoRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def _validated_provider_target(provider: str, target: str) -> str:
+    parsed = urllib.parse.urlparse(target)
+    hostname = (parsed.hostname or "").lower().rstrip(".")
+    if parsed.scheme not in {"http", "https"} or not hostname:
+        raise HTTPException(400, "Provider URL must use HTTP or HTTPS")
+    if parsed.username or parsed.password:
+        raise HTTPException(400, "Provider URL must not contain credentials")
+    if provider not in {"openai", "ollama", "openai-compatible"}:
+        raise HTTPException(400, "Unsupported model provider")
+    if provider == "openai" and (parsed.scheme != "https" or hostname != "api.openai.com"):
+        raise HTTPException(400, "OpenAI must use https://api.openai.com")
+    if provider == "ollama" and hostname not in {"localhost", "127.0.0.1", "::1"}:
+        raise HTTPException(400, "Ollama must use a loopback URL")
+
+    try:
+        port = parsed.port or (443 if parsed.scheme == "https" else 80)
+        addresses = {
+            ipaddress.ip_address(item[4][0])
+            for item in socket.getaddrinfo(hostname, port, type=socket.SOCK_STREAM)
+        }
+    except (OSError, ValueError) as exc:
+        raise HTTPException(400, "Provider hostname could not be resolved") from exc
+    if not addresses:
+        raise HTTPException(400, "Provider hostname could not be resolved")
+    if any(address.is_link_local or address.is_multicast or address.is_unspecified or address.is_reserved for address in addresses):
+        raise HTTPException(400, "Provider URL resolves to a prohibited network address")
+    return parsed.geturl()
 
 
 class ProfileInput(BaseModel):
@@ -244,14 +280,15 @@ def test_provider(payload: ProviderInput, db=Depends(get_db)):
             if not secret:
                 raise HTTPException(400, "OPENAI_API_KEY is not configured")
             headers["Authorization"] = f"Bearer {vault.decrypt(secret.encrypted_value)}"
-    parsed_target = urllib.parse.urlparse(target)
-    if parsed_target.scheme not in {"http", "https"} or not parsed_target.netloc:
-        raise HTTPException(400, "Provider URL must use HTTP or HTTPS")
+    validated_target = _validated_provider_target(provider, target)
     try:
-        # Scheme and authority are allow-listed immediately above; Bandit's
-        # generic urllib rule cannot infer that validation.
-        with urllib.request.urlopen(  # nosec B310
-            urllib.request.Request(target, headers=headers), timeout=8
+        # The endpoint is deliberately owner-configurable for self-hosted models.
+        # Validation above blocks credentials, metadata/link-local ranges, unsafe
+        # provider/host combinations, and redirects. CodeQL cannot infer those
+        # application-level controls.
+        opener = urllib.request.build_opener(_NoRedirectHandler())
+        with opener.open(  # lgtm[py/full-ssrf]
+            urllib.request.Request(validated_target, headers=headers), timeout=8
         ) as response:
             if response.status >= 300:
                 raise HTTPException(502, f"Provider returned HTTP {response.status}")

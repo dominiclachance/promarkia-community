@@ -12,8 +12,8 @@ export function captureLaunchAttribution() {
   if (!attribution.utm_source && document.referrer) {
     try {
       const host = new URL(document.referrer).hostname;
-      if (host.includes('github.com')) attribution.utm_source = 'github';
-      if (host.includes('producthunt.com')) attribution.utm_source = 'product_hunt';
+      if (host === 'github.com' || host.endsWith('.github.com')) attribution.utm_source = 'github';
+      if (host === 'producthunt.com' || host.endsWith('.producthunt.com')) attribution.utm_source = 'product_hunt';
     } catch {
       // Invalid referrers are ignored.
     }

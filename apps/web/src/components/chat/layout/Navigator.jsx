@@ -48,9 +48,10 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import { scheduledTasksToCsv, parseScheduledTasksCsv } from '../../../utils/scheduledTasksCsv';
 import { auth, functions } from '../../../firebase/client';
 import { squads, squadGroups } from '../../../data/squads';
+import { secureRandomInt } from '../../../utils/secureRandom';
 
 
-const generateSessionId = () => Math.floor(Math.random() * 1_000_000).toString();
+const generateSessionId = () => secureRandomInt(1, 1_000_000).toString();
 
 // Find which group a teamId belongs to
 const getGroupForTeamId = (teamId) => {

@@ -17,6 +17,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { t } from 'i18next';
 import { env } from '../../../config/env';
 import { auth } from '../../../firebase/client';
+import { secureRandomInt } from '../../../utils/secureRandom';
 
 const HELP_TEAM_ID = 21;
 
@@ -55,7 +56,7 @@ const HelpChatbot = () => {
   const handleOpen = useCallback(() => {
     setOpen(true);
     // New session each time panel opens
-    setSessionId(Math.floor(Math.random() * 900000) + 100000);
+    setSessionId(secureRandomInt(100000, 1000000));
     setMessages([
       { role: 'bot', text: t('help_bot_welcome') },
     ]);
