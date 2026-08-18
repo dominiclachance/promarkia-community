@@ -1,0 +1,133 @@
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Added CSS variables for common values */
+:root {
+  --spin-duration: 1s;
+  --pre-bg: #48494B;
+  --dark-bg: #212121;
+  --link-color: #000;
+  --font-primary: 'Arial', sans-serif;
+
+  /* Table border colors */
+  --table-border-light: #dddddd;
+  --table-border-dark: #444444;
+  --table-border-color: var(--table-border-light); /* default (light) */
+}
+
+/* Prefer system dark mode if no explicit theme hook is used */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --table-border-color: var(--table-border-dark);
+  }
+}
+
+/* Optional explicit dark-mode hooks (use whichever your app uses) */
+:root[data-theme="dark"],
+[data-theme="dark"],
+.dark {
+  --table-border-color: var(--table-border-dark);
+}
+
+/* Apply global font */
+body, p, li, h1, h2 {
+  font-family: var(--font-primary) !important;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin var(--spin-duration) linear infinite !important;
+}
+
+.css-3x00ba {
+  background-color: var(--dark-bg) !important;
+}
+
+.react-slideshow-container .default-nav {
+  margin: -30px;
+}
+
+pre code.hljs {
+  max-height: 200px;
+}
+
+/* Removed redundant font-family from .ez-consent */
+.ez-consent {
+  /* ...existing code... */
+}
+
+h1 {
+  line-height: 1em;
+  font-size: 40px;
+}
+
+h2 {
+  line-height: 0.9em;
+  font-size: 25px;
+}
+
+p {
+  /* Removed font-family; using global font */
+  line-height: 1.5em;
+}
+
+li {
+  /* Removed font-family; using global font */
+  line-height: 1.5em;
+}
+
+/* Removed anchor styling to avoid overriding specific link styles */
+a, a:link, a:visited, a:hover, a:active {
+  /* color: var(--link-color) !important; */ /* Commented out to prevent conflicts */
+  cursor: pointer !important;
+  /*text-decoration: underline !important;*/
+}
+
+/* ============================= */
+/*   TABLE BORDERS (Light/Dark)  */
+/* ============================= */
+
+/* Plain HTML tables */
+table {
+  border-collapse: collapse !important; /* avoid double borders */
+  border-spacing: 0 !important;
+}
+
+table th,
+table td {
+  border: 1px solid var(--table-border-color) !important;
+  padding: 8px; /* optional: keep cells readable */
+}
+
+/* Material UI tables */
+.MuiTable-root {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+.MuiTableCell-root {
+  border: 1px solid var(--table-border-color) !important;
+}
+
+/* (Optional) Make sure sticky headers also keep the border */
+.MuiTableCell-head {
+  border: 1px solid var(--table-border-color) !important;
+}
+.css-f3f1tk {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding-left: 13px;
+    padding-bottom: 40px;
+    background-color: rgb(18, 18, 18);
+}

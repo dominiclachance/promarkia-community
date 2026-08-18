@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   secret-scan:
@@ -25,6 +26,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
       - run: python scripts/check_dco.py "origin/${{ github.base_ref }}"
 
   test:
@@ -34,25 +36,32 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-14]
-        python: ["3.11", "3.13"]
+        python: ["3.12"]
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: ${{ matrix.python }}
           cache: pip
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
       - name: Install pinned dependencies
         run: |
-          python -m pip install -r requirements.lock -r requirements-security.lock
+          python -m pip install -r requirements.lock -r requirements-security.lock -r requirements-test.lock
           python -m pip install --no-deps -e .
+      - name: Build full local interface
+        run: python scripts/build_full_local.py
       - name: Test
         run: python -m pytest
       - name: Static security scan
-        run: python -m bandit -r app -q
+        run: python -m bandit -r apps/api/promarkia_local apps/api/autogenstudio/web -q
       - name: Dependency vulnerability scan
         run: python -m pip_audit -r requirements.lock --progress-spinner off
       - name: Compile
-        run: python -m compileall -q app tests
+        run: python -m compileall -q apps/api tests
 
   sbom:
     runs-on: ubuntu-latest

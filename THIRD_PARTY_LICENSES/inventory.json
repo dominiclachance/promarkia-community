@@ -1,10 +1,33 @@
 {
   "components": [
     {
+      "homepage": "https://github.com/Tinche/aiofiles#history",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/aiofiles-24.1.0/aiofiles-24.1.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/aiofiles-24.1.0/aiofiles-24.1.0.dist-info__licenses__NOTICE"
+      ],
+      "name": "aiofiles",
+      "purl": "pkg:pypi/aiofiles@24.1.0",
+      "type": "library",
+      "version": "24.1.0"
+    },
+    {
+      "homepage": "https://alembic.sqlalchemy.org",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/alembic-1.19.1/alembic-1.19.1.dist-info__licenses__LICENSE"
+      ],
+      "name": "alembic",
+      "purl": "pkg:pypi/alembic@1.19.1",
+      "type": "library",
+      "version": "1.19.1"
+    },
+    {
       "homepage": "https://altgraph.readthedocs.io",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/altgraph-0.17.5/LICENSE"
+        "THIRD_PARTY_LICENSES/altgraph-0.17.5/altgraph-0.17.5.dist-info__LICENSE"
       ],
       "name": "altgraph",
       "purl": "pkg:pypi/altgraph@0.17.5",
@@ -15,7 +38,7 @@
       "homepage": "https://github.com/fastapi/annotated-doc",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/annotated-doc-0.0.5/LICENSE"
+        "THIRD_PARTY_LICENSES/annotated-doc-0.0.5/annotated_doc-0.0.5.dist-info__licenses__LICENSE"
       ],
       "name": "annotated-doc",
       "purl": "pkg:pypi/annotated-doc@0.0.5",
@@ -26,7 +49,7 @@
       "homepage": "https://github.com/annotated-types/annotated-types",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/annotated-types-0.8.0/LICENSE"
+        "THIRD_PARTY_LICENSES/annotated-types-0.8.0/annotated_types-0.8.0.dist-info__licenses__LICENSE"
       ],
       "name": "annotated-types",
       "purl": "pkg:pypi/annotated-types@0.8.0",
@@ -34,10 +57,21 @@
       "version": "0.8.0"
     },
     {
+      "homepage": "https://github.com/anthropics/anthropic-sdk-python",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/anthropic-0.122.0/anthropic-0.122.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "anthropic",
+      "purl": "pkg:pypi/anthropic@0.122.0",
+      "type": "library",
+      "version": "0.122.0"
+    },
+    {
       "homepage": "https://anyio.readthedocs.io/en/latest/",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/anyio-4.14.2/LICENSE"
+        "THIRD_PARTY_LICENSES/anyio-4.14.2/anyio-4.14.2.dist-info__licenses__LICENSE"
       ],
       "name": "anyio",
       "purl": "pkg:pypi/anyio@4.14.2",
@@ -45,10 +79,110 @@
       "version": "4.14.2"
     },
     {
+      "homepage": "https://www.attrs.org/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/attrs-26.1.0/attrs-26.1.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "attrs",
+      "purl": "pkg:pypi/attrs@26.1.0",
+      "type": "library",
+      "version": "26.1.0"
+    },
+    {
+      "homepage": "https://github.com/AbstractUmbra/audioop",
+      "license": "PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/audioop-lts-0.2.2/audioop_lts-0.2.2.dist-info__licenses__LICENSE"
+      ],
+      "name": "audioop-lts",
+      "purl": "pkg:pypi/audioop-lts@0.2.2",
+      "type": "library",
+      "version": "0.2.2"
+    },
+    {
+      "homepage": "",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/autogen-agentchat-0.6.4/autogen_agentchat-0.6.4.dist-info__licenses__LICENSE-CODE"
+      ],
+      "name": "autogen-agentchat",
+      "purl": "pkg:pypi/autogen-agentchat@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "homepage": "",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/autogen-core-0.6.4/autogen_core-0.6.4.dist-info__licenses__LICENSE-CODE"
+      ],
+      "name": "autogen-core",
+      "purl": "pkg:pypi/autogen-core@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "homepage": "",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/autogen-ext-0.6.4/autogen_ext-0.6.4.dist-info__licenses__LICENSE-CODE"
+      ],
+      "name": "autogen-ext",
+      "purl": "pkg:pypi/autogen-ext@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "homepage": "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/azure-ai-documentintelligence-1.0.2/azure_ai_documentintelligence-1.0.2.dist-info__LICENSE"
+      ],
+      "name": "azure-ai-documentintelligence",
+      "purl": "pkg:pypi/azure-ai-documentintelligence@1.0.2",
+      "type": "library",
+      "version": "1.0.2"
+    },
+    {
+      "homepage": "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/core/azure-core",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/azure-core-1.41.0/azure_core-1.41.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "azure-core",
+      "purl": "pkg:pypi/azure-core@1.41.0",
+      "type": "library",
+      "version": "1.41.0"
+    },
+    {
+      "homepage": "https://github.com/Azure/azure-sdk-for-python",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/azure-identity-1.25.3/azure_identity-1.25.3.dist-info__licenses__LICENSE"
+      ],
+      "name": "azure-identity",
+      "purl": "pkg:pypi/azure-identity@1.25.3",
+      "type": "library",
+      "version": "1.25.3"
+    },
+    {
+      "homepage": "https://www.crummy.com/software/BeautifulSoup/bs4/download/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/beautifulsoup4-4.15.0/beautifulsoup4-4.15.0.dist-info__licenses__AUTHORS",
+        "THIRD_PARTY_LICENSES/beautifulsoup4-4.15.0/beautifulsoup4-4.15.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "beautifulsoup4",
+      "purl": "pkg:pypi/beautifulsoup4@4.15.0",
+      "type": "library",
+      "version": "4.15.0"
+    },
+    {
       "homepage": "https://github.com/certifi/python-certifi",
       "license": "MPL-2.0",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/certifi-2026.7.22/LICENSE"
+        "THIRD_PARTY_LICENSES/certifi-2026.7.22/certifi-2026.7.22.dist-info__licenses__LICENSE"
       ],
       "name": "certifi",
       "purl": "pkg:pypi/certifi@2026.7.22",
@@ -56,10 +190,32 @@
       "version": "2026.7.22"
     },
     {
+      "homepage": "https://cffi.readthedocs.io/",
+      "license": "MIT-0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/cffi-2.1.1/cffi-2.1.1.dist-info__licenses__LICENSE"
+      ],
+      "name": "cffi",
+      "purl": "pkg:pypi/cffi@2.1.1",
+      "type": "library",
+      "version": "2.1.1"
+    },
+    {
+      "homepage": "https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/charset-normalizer-3.5.1/charset_normalizer-3.5.1.dist-info__licenses__LICENSE"
+      ],
+      "name": "charset-normalizer",
+      "purl": "pkg:pypi/charset-normalizer@3.5.1",
+      "type": "library",
+      "version": "3.5.1"
+    },
+    {
       "homepage": "https://click.palletsprojects.com/page/changes/",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/click-8.4.2/LICENSE.txt"
+        "THIRD_PARTY_LICENSES/click-8.4.2/click-8.4.2.dist-info__licenses__LICENSE.txt"
       ],
       "name": "click",
       "purl": "pkg:pypi/click@8.4.2",
@@ -67,10 +223,19 @@
       "version": "8.4.2"
     },
     {
+      "homepage": "http://github.com/mwilliamson/python-cobble",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [],
+      "name": "cobble",
+      "purl": "pkg:pypi/cobble@0.1.4",
+      "type": "library",
+      "version": "0.1.4"
+    },
+    {
       "homepage": "https://github.com/tartley/colorama",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/colorama-0.4.6/LICENSE.txt"
+        "THIRD_PARTY_LICENSES/colorama-0.4.6/colorama-0.4.6.dist-info__licenses__LICENSE.txt"
       ],
       "name": "colorama",
       "purl": "pkg:pypi/colorama@0.4.6",
@@ -78,10 +243,129 @@
       "version": "0.4.6"
     },
     {
+      "homepage": "https://coloredlogs.readthedocs.io",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/coloredlogs-15.0.1/coloredlogs-15.0.1.dist-info__LICENSE.txt"
+      ],
+      "name": "coloredlogs",
+      "purl": "pkg:pypi/coloredlogs@15.0.1",
+      "type": "library",
+      "version": "15.0.1"
+    },
+    {
+      "homepage": "https://github.com/composiohq/composio",
+      "license": "Apache-2.0",
+      "licenseFiles": [],
+      "name": "composio",
+      "purl": "pkg:pypi/composio@0.19.0",
+      "type": "library",
+      "version": "0.19.0"
+    },
+    {
+      "homepage": "https://github.com/ComposioHQ/composio-base-py",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/composio-client-1.43.0/composio_client-1.43.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "composio-client",
+      "purl": "pkg:pypi/composio-client@1.43.0",
+      "type": "library",
+      "version": "1.43.0"
+    },
+    {
+      "homepage": "https://github.com/contourpy/contourpy",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/contourpy-1.3.3/contourpy-1.3.3.dist-info__LICENSE"
+      ],
+      "name": "contourpy",
+      "purl": "pkg:pypi/contourpy@1.3.3",
+      "type": "library",
+      "version": "1.3.3"
+    },
+    {
+      "homepage": "https://github.com/pallets-eco/croniter",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/croniter-6.2.4/croniter-6.2.4.dist-info__licenses__LICENSE"
+      ],
+      "name": "croniter",
+      "purl": "pkg:pypi/croniter@6.2.4",
+      "type": "library",
+      "version": "6.2.4"
+    },
+    {
+      "homepage": "https://cryptography.io/en/latest/changelog/",
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/cryptography-50.0.0/cryptography-50.0.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/cryptography-50.0.0/cryptography-50.0.0.dist-info__licenses__LICENSE.APACHE",
+        "THIRD_PARTY_LICENSES/cryptography-50.0.0/cryptography-50.0.0.dist-info__licenses__LICENSE.BSD"
+      ],
+      "name": "cryptography",
+      "purl": "pkg:pypi/cryptography@50.0.0",
+      "type": "library",
+      "version": "50.0.0"
+    },
+    {
+      "homepage": "https://matplotlib.org/cycler/",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/cycler-0.12.1/cycler-0.12.1.dist-info__LICENSE"
+      ],
+      "name": "cycler",
+      "purl": "pkg:pypi/cycler@0.12.1",
+      "type": "library",
+      "version": "0.12.1"
+    },
+    {
+      "homepage": "https://github.com/tiran/defusedxml",
+      "license": "PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/defusedxml-0.7.1/defusedxml-0.7.1.dist-info__LICENSE"
+      ],
+      "name": "defusedxml",
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "type": "library",
+      "version": "0.7.1"
+    },
+    {
+      "homepage": "https://github.com/python-distro/distro",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/distro-1.9.0/distro-1.9.0.dist-info__LICENSE"
+      ],
+      "name": "distro",
+      "purl": "pkg:pypi/distro@1.9.0",
+      "type": "library",
+      "version": "1.9.0"
+    },
+    {
+      "homepage": "https://github.com/rr-/docstring_parser",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/docstring-parser-0.18.0/docstring_parser-0.18.0.dist-info__licenses__LICENSE.md"
+      ],
+      "name": "docstring_parser",
+      "purl": "pkg:pypi/docstring-parser@0.18.0",
+      "type": "library",
+      "version": "0.18.0"
+    },
+    {
+      "homepage": "https://foss.heptapod.net/openpyxl/et_xmlfile",
+      "license": "MIT",
+      "licenseFiles": [],
+      "name": "et_xmlfile",
+      "purl": "pkg:pypi/et-xmlfile@2.0.0",
+      "type": "library",
+      "version": "2.0.0"
+    },
+    {
       "homepage": "https://github.com/fastapi/fastapi",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/fastapi-0.141.1/LICENSE"
+        "THIRD_PARTY_LICENSES/fastapi-0.141.1/fastapi-0.141.1.dist-info__licenses__LICENSE"
       ],
       "name": "fastapi",
       "purl": "pkg:pypi/fastapi@0.141.1",
@@ -89,10 +373,65 @@
       "version": "0.141.1"
     },
     {
+      "homepage": "https://google.github.io/flatbuffers/",
+      "license": "Apache-2.0",
+      "licenseFiles": [],
+      "name": "flatbuffers",
+      "purl": "pkg:pypi/flatbuffers@25.12.19",
+      "type": "library",
+      "version": "25.12.19"
+    },
+    {
+      "homepage": "http://github.com/fonttools/fonttools",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/fonttools-4.63.0/fonttools-4.63.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/fonttools-4.63.0/fonttools-4.63.0.dist-info__licenses__LICENSE.external"
+      ],
+      "name": "fonttools",
+      "purl": "pkg:pypi/fonttools@4.63.0",
+      "type": "library",
+      "version": "4.63.0"
+    },
+    {
+      "homepage": "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/google-auth-2.56.3/google_auth-2.56.3.dist-info__licenses__LICENSE"
+      ],
+      "name": "google-auth",
+      "purl": "pkg:pypi/google-auth@2.56.3",
+      "type": "library",
+      "version": "2.56.3"
+    },
+    {
+      "homepage": "https://github.com/googleapis/python-genai",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/google-genai-1.75.0/google_genai-1.75.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "google-genai",
+      "purl": "pkg:pypi/google-genai@1.75.0",
+      "type": "library",
+      "version": "1.75.0"
+    },
+    {
+      "homepage": "https://greenlet.readthedocs.io",
+      "license": "MIT AND PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/greenlet-3.5.5/greenlet-3.5.5.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/greenlet-3.5.5/greenlet-3.5.5.dist-info__licenses__LICENSE.PSF"
+      ],
+      "name": "greenlet",
+      "purl": "pkg:pypi/greenlet@3.5.5",
+      "type": "library",
+      "version": "3.5.5"
+    },
+    {
       "homepage": "https://github.com/python-hyper/h11",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/h11-0.16.0/LICENSE.txt"
+        "THIRD_PARTY_LICENSES/h11-0.16.0/h11-0.16.0.dist-info__licenses__LICENSE.txt"
       ],
       "name": "h11",
       "purl": "pkg:pypi/h11@0.16.0",
@@ -100,10 +439,22 @@
       "version": "0.16.0"
     },
     {
+      "homepage": "https://github.com/Alir3z4/html2text/",
+      "license": "GPL-3.0-or-later",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/html2text-2025.4.15/html2text-2025.4.15.dist-info__licenses__AUTHORS.rst",
+        "THIRD_PARTY_LICENSES/html2text-2025.4.15/html2text-2025.4.15.dist-info__licenses__COPYING"
+      ],
+      "name": "html2text",
+      "purl": "pkg:pypi/html2text@2025.4.15",
+      "type": "library",
+      "version": "2025.4.15"
+    },
+    {
       "homepage": "https://www.encode.io/httpcore",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/httpcore-1.0.9/LICENSE.md"
+        "THIRD_PARTY_LICENSES/httpcore-1.0.9/httpcore-1.0.9.dist-info__licenses__LICENSE.md"
       ],
       "name": "httpcore",
       "purl": "pkg:pypi/httpcore@1.0.9",
@@ -114,9 +465,9 @@
       "homepage": "https://github.com/MagicStack/httptools",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/httptools-0.8.0/LICENSE",
-        "THIRD_PARTY_LICENSES/httptools-0.8.0/LICENSE-MIT",
-        "THIRD_PARTY_LICENSES/httptools-0.8.0/LICENSE"
+        "THIRD_PARTY_LICENSES/httptools-0.8.0/httptools-0.8.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/httptools-0.8.0/httptools-0.8.0.dist-info__licenses__vendor__http-parser__LICENSE-MIT",
+        "THIRD_PARTY_LICENSES/httptools-0.8.0/httptools-0.8.0.dist-info__licenses__vendor__llhttp__LICENSE"
       ],
       "name": "httptools",
       "purl": "pkg:pypi/httptools@0.8.0",
@@ -127,7 +478,7 @@
       "homepage": "https://github.com/encode/httpx/blob/master/CHANGELOG.md",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/httpx-0.28.1/LICENSE.md"
+        "THIRD_PARTY_LICENSES/httpx-0.28.1/httpx-0.28.1.dist-info__licenses__LICENSE.md"
       ],
       "name": "httpx",
       "purl": "pkg:pypi/httpx@0.28.1",
@@ -135,10 +486,32 @@
       "version": "0.28.1"
     },
     {
+      "homepage": "https://github.com/florimondmanca/httpx-sse",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/httpx-sse-0.4.3/httpx_sse-0.4.3.dist-info__licenses__LICENSE"
+      ],
+      "name": "httpx-sse",
+      "purl": "pkg:pypi/httpx-sse@0.4.3",
+      "type": "library",
+      "version": "0.4.3"
+    },
+    {
+      "homepage": "https://humanfriendly.readthedocs.io",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/humanfriendly-10.0/humanfriendly-10.0.dist-info__LICENSE.txt"
+      ],
+      "name": "humanfriendly",
+      "purl": "pkg:pypi/humanfriendly@10.0",
+      "type": "library",
+      "version": "10.0"
+    },
+    {
       "homepage": "https://github.com/kjd/idna/blob/master/HISTORY.md",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/idna-3.18/LICENSE.md"
+        "THIRD_PARTY_LICENSES/idna-3.18/idna-3.18.dist-info__licenses__LICENSE.md"
       ],
       "name": "idna",
       "purl": "pkg:pypi/idna@3.18",
@@ -146,23 +519,352 @@
       "version": "3.18"
     },
     {
-      "homepage": "https://github.com/pytest-dev/iniconfig",
+      "homepage": "https://github.com/imageio/imageio-ffmpeg",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/imageio-ffmpeg-0.6.0/imageio_ffmpeg-0.6.0.dist-info__LICENSE"
+      ],
+      "name": "imageio-ffmpeg",
+      "purl": "pkg:pypi/imageio-ffmpeg@0.6.0",
+      "type": "library",
+      "version": "0.6.0"
+    },
+    {
+      "homepage": "https://github.com/gweis/isodate/",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/isodate-0.7.2/isodate-0.7.2.dist-info__LICENSE"
+      ],
+      "name": "isodate",
+      "purl": "pkg:pypi/isodate@0.7.2",
+      "type": "library",
+      "version": "0.7.2"
+    },
+    {
+      "homepage": "https://github.com/pydantic/jiter/",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/iniconfig-2.3.0/LICENSE"
+        "THIRD_PARTY_LICENSES/jiter-0.16.0/jiter-0.16.0.dist-info__licenses__LICENSE"
       ],
-      "name": "iniconfig",
-      "purl": "pkg:pypi/iniconfig@2.3.0",
+      "name": "jiter",
+      "purl": "pkg:pypi/jiter@0.16.0",
       "type": "library",
-      "version": "2.3.0"
+      "version": "0.16.0"
+    },
+    {
+      "homepage": "https://joblib.readthedocs.io",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/joblib-1.5.3/joblib-1.5.3.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "joblib",
+      "purl": "pkg:pypi/joblib@1.5.3",
+      "type": "library",
+      "version": "1.5.3"
+    },
+    {
+      "homepage": "https://github.com/richard-gyiko/json-schema-to-pydantic",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/json-schema-to-pydantic-0.4.11/json_schema_to_pydantic-0.4.11.dist-info__licenses__LICENSE"
+      ],
+      "name": "json-schema-to-pydantic",
+      "purl": "pkg:pypi/json-schema-to-pydantic@0.4.11",
+      "type": "library",
+      "version": "0.4.11"
+    },
+    {
+      "homepage": "https://jsonref.readthedocs.io/en/latest/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/jsonref-1.1.0/jsonref-1.1.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "jsonref",
+      "purl": "pkg:pypi/jsonref@1.1.0",
+      "type": "library",
+      "version": "1.1.0"
+    },
+    {
+      "homepage": "https://github.com/python-jsonschema/jsonschema",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/jsonschema-4.26.0/jsonschema-4.26.0.dist-info__licenses__COPYING"
+      ],
+      "name": "jsonschema",
+      "purl": "pkg:pypi/jsonschema@4.26.0",
+      "type": "library",
+      "version": "4.26.0"
+    },
+    {
+      "homepage": "https://jsonschema-specifications.readthedocs.io/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/jsonschema-specifications-2025.9.1/jsonschema_specifications-2025.9.1.dist-info__licenses__COPYING"
+      ],
+      "name": "jsonschema-specifications",
+      "purl": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "type": "library",
+      "version": "2025.9.1"
+    },
+    {
+      "homepage": "https://github.com/nucleic/kiwi",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/kiwisolver-1.5.0/kiwisolver-1.5.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "kiwisolver",
+      "purl": "pkg:pypi/kiwisolver@1.5.0",
+      "type": "library",
+      "version": "1.5.0"
+    },
+    {
+      "homepage": "https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst",
+      "license": "MIT",
+      "licenseFiles": [],
+      "name": "loguru",
+      "purl": "pkg:pypi/loguru@0.7.3",
+      "type": "library",
+      "version": "0.7.3"
+    },
+    {
+      "homepage": "https://lxml.de/",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/lxml-6.1.1/lxml-6.1.1.dist-info__licenses__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/lxml-6.1.1/lxml-6.1.1.dist-info__licenses__LICENSES.txt"
+      ],
+      "name": "lxml",
+      "purl": "pkg:pypi/lxml@6.1.1",
+      "type": "library",
+      "version": "6.1.1"
+    },
+    {
+      "homepage": "https://securityresearch.google/magika",
+      "license": "Apache-2.0",
+      "licenseFiles": [],
+      "name": "magika",
+      "purl": "pkg:pypi/magika@0.6.3",
+      "type": "library",
+      "version": "0.6.3"
+    },
+    {
+      "homepage": "https://www.makotemplates.org/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/mako-1.4.1/mako-1.4.1.dist-info__licenses__LICENSE"
+      ],
+      "name": "Mako",
+      "purl": "pkg:pypi/mako@1.4.1",
+      "type": "library",
+      "version": "1.4.1"
+    },
+    {
+      "homepage": "https://github.com/mwilliamson/python-mammoth",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/mammoth-1.11.0/mammoth-1.11.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "mammoth",
+      "purl": "pkg:pypi/mammoth@1.11.0",
+      "type": "library",
+      "version": "1.11.0"
+    },
+    {
+      "homepage": "http://github.com/matthewwithanm/python-markdownify",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/markdownify-1.2.3/markdownify-1.2.3.dist-info__LICENSE"
+      ],
+      "name": "markdownify",
+      "purl": "pkg:pypi/markdownify@1.2.3",
+      "type": "library",
+      "version": "1.2.3"
+    },
+    {
+      "homepage": "https://github.com/microsoft/markitdown#readme",
+      "license": "MIT",
+      "licenseFiles": [],
+      "name": "markitdown",
+      "purl": "pkg:pypi/markitdown@0.1.5",
+      "type": "library",
+      "version": "0.1.5"
+    },
+    {
+      "homepage": "https://palletsprojects.com/donate",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/markupsafe-3.0.3/markupsafe-3.0.3.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "MarkupSafe",
+      "purl": "pkg:pypi/markupsafe@3.0.3",
+      "type": "library",
+      "version": "3.0.3"
+    },
+    {
+      "homepage": "https://matplotlib.org",
+      "license": "PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/matplotlib-3.11.1/matplotlib-3.11.1.dist-info__LICENSE",
+        "THIRD_PARTY_LICENSES/matplotlib-3.11.1/matplotlib__mpl-data__fonts__ttf__LICENSE_DEJAVU",
+        "THIRD_PARTY_LICENSES/matplotlib-3.11.1/matplotlib__mpl-data__fonts__ttf__LICENSE_STIX"
+      ],
+      "name": "matplotlib",
+      "purl": "pkg:pypi/matplotlib@3.11.1",
+      "type": "library",
+      "version": "3.11.1"
+    },
+    {
+      "homepage": "https://modelcontextprotocol.io",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/mcp-1.29.0/mcp-1.29.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "mcp",
+      "purl": "pkg:pypi/mcp@1.29.0",
+      "type": "library",
+      "version": "1.29.0"
+    },
+    {
+      "homepage": "http://mpmath.org/",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/mpmath-1.3.0/mpmath-1.3.0.dist-info__LICENSE"
+      ],
+      "name": "mpmath",
+      "purl": "pkg:pypi/mpmath@1.3.0",
+      "type": "library",
+      "version": "1.3.0"
+    },
+    {
+      "homepage": "https://github.com/AzureAD/microsoft-authentication-library-for-python",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/msal-1.37.0/msal-1.37.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "msal",
+      "purl": "pkg:pypi/msal@1.37.0",
+      "type": "library",
+      "version": "1.37.0"
+    },
+    {
+      "homepage": "https://github.com/AzureAD/microsoft-authentication-extensions-for-python/releases",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/msal-extensions-1.3.1/msal_extensions-1.3.1.dist-info__LICENSE"
+      ],
+      "name": "msal-extensions",
+      "purl": "pkg:pypi/msal-extensions@1.3.1",
+      "type": "library",
+      "version": "1.3.1"
+    },
+    {
+      "homepage": "https://github.com/narwhals-dev/narwhals",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/narwhals-2.24.0/narwhals-2.24.0.dist-info__licenses__LICENSE.md"
+      ],
+      "name": "narwhals",
+      "purl": "pkg:pypi/narwhals@2.24.0",
+      "type": "library",
+      "version": "2.24.0"
+    },
+    {
+      "homepage": "https://numpy.org",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy___core__include__numpy__libdivide__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy___core__src__common__pythoncapi-compat__COPYING",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy___core__src__highway__LICENSE",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy___core__src__multiarray__dragon4_LICENSE.txt",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy___core__src__npysort__x86-simd-sort__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy___core__src__umath__svml__LICENSE",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__fft__pocketfft__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__linalg__lapack_lite__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__ma__LICENSE",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__src__distributions__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__src__mt19937__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__src__pcg64__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__src__philox__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__src__sfc64__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy-2.5.2.dist-info__licenses__numpy__random__src__splitmix64__LICENSE.md",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy___core__include__numpy__random__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy__ma__LICENSE",
+        "THIRD_PARTY_LICENSES/numpy-2.5.2/numpy__random__LICENSE.md"
+      ],
+      "name": "numpy",
+      "purl": "pkg:pypi/numpy@2.5.2",
+      "type": "library",
+      "version": "2.5.2"
+    },
+    {
+      "homepage": "https://www.decalage.info/python/olefileio",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/olefile-0.47/olefile-0.47.dist-info__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/olefile-0.47/olefile__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/olefile-0.47/olefile__doc__License.html",
+        "THIRD_PARTY_LICENSES/olefile-0.47/olefile__doc__License.md"
+      ],
+      "name": "olefile",
+      "purl": "pkg:pypi/olefile@0.47",
+      "type": "library",
+      "version": "0.47"
+    },
+    {
+      "homepage": "https://onnxruntime.ai",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/onnxruntime-1.20.1/onnxruntime__LICENSE"
+      ],
+      "name": "onnxruntime",
+      "purl": "pkg:pypi/onnxruntime@1.20.1",
+      "type": "library",
+      "version": "1.20.1"
+    },
+    {
+      "homepage": "https://github.com/openai/openai-python",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/openai-2.54.0/openai-2.54.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "openai",
+      "purl": "pkg:pypi/openai@2.54.0",
+      "type": "library",
+      "version": "2.54.0"
+    },
+    {
+      "homepage": "https://openpyxl.readthedocs.io",
+      "license": "MIT",
+      "licenseFiles": [],
+      "name": "openpyxl",
+      "purl": "pkg:pypi/openpyxl@3.1.5",
+      "type": "library",
+      "version": "3.1.5"
+    },
+    {
+      "homepage": "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/opentelemetry-api-1.44.0/opentelemetry_api-1.44.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "opentelemetry-api",
+      "purl": "pkg:pypi/opentelemetry-api@1.44.0",
+      "type": "library",
+      "version": "1.44.0"
     },
     {
       "homepage": "https://packaging.pypa.io/",
       "license": "Apache-2.0 OR BSD-2-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/packaging-26.3/LICENSE",
-        "THIRD_PARTY_LICENSES/packaging-26.3/LICENSE.APACHE",
-        "THIRD_PARTY_LICENSES/packaging-26.3/LICENSE.BSD"
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging-26.3.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging-26.3.dist-info__licenses__LICENSE.APACHE",
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging-26.3.dist-info__licenses__LICENSE.BSD",
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging__licenses____init__.py",
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging__licenses____pycache______init__.cpython-313.pyc",
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging__licenses____pycache_____spdx.cpython-313.pyc",
+        "THIRD_PARTY_LICENSES/packaging-26.3/packaging__licenses___spdx.py"
       ],
       "name": "packaging",
       "purl": "pkg:pypi/packaging@26.3",
@@ -170,10 +872,43 @@
       "version": "26.3"
     },
     {
+      "homepage": "https://pandas.pydata.org",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pandas-2.3.3/pandas-2.3.3.dist-info__LICENSE"
+      ],
+      "name": "pandas",
+      "purl": "pkg:pypi/pandas@2.3.3",
+      "type": "library",
+      "version": "2.3.3"
+    },
+    {
+      "homepage": "https://github.com/pdfminer/pdfminer.six",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pdfminer-six-20251230/pdfminer_six-20251230.dist-info__licenses__LICENSE"
+      ],
+      "name": "pdfminer.six",
+      "purl": "pkg:pypi/pdfminer-six@20251230",
+      "type": "library",
+      "version": "20251230"
+    },
+    {
+      "homepage": "https://github.com/jsvine/pdfplumber",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pdfplumber-0.11.9/pdfplumber-0.11.9.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "pdfplumber",
+      "purl": "pkg:pypi/pdfplumber@0.11.9",
+      "type": "library",
+      "version": "0.11.9"
+    },
+    {
       "homepage": "https://github.com/erocarrera/pefile",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pefile-2024.8.26/LICENSE"
+        "THIRD_PARTY_LICENSES/pefile-2024.8.26/pefile-2024.8.26.dist-info__LICENSE"
       ],
       "name": "pefile",
       "purl": "pkg:pypi/pefile@2024.8.26",
@@ -181,21 +916,79 @@
       "version": "2024.8.26"
     },
     {
-      "homepage": "",
-      "license": "MIT",
+      "homepage": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+      "license": "MIT-CMU",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pluggy-1.6.0/LICENSE"
+        "THIRD_PARTY_LICENSES/pillow-12.3.0/pillow-12.3.0.dist-info__licenses__LICENSE"
       ],
-      "name": "pluggy",
-      "purl": "pkg:pypi/pluggy@1.6.0",
+      "name": "pillow",
+      "purl": "pkg:pypi/pillow@12.3.0",
       "type": "library",
-      "version": "1.6.0"
+      "version": "12.3.0"
+    },
+    {
+      "homepage": "https://github.com/Microsoft/playwright-python",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/playwright-1.62.0/playwright-1.62.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/playwright-1.62.0/playwright__driver__LICENSE",
+        "THIRD_PARTY_LICENSES/playwright-1.62.0/playwright__driver__package__LICENSE",
+        "THIRD_PARTY_LICENSES/playwright-1.62.0/playwright__driver__package__NOTICE"
+      ],
+      "name": "playwright",
+      "purl": "pkg:pypi/playwright@1.62.0",
+      "type": "library",
+      "version": "1.62.0"
+    },
+    {
+      "homepage": "https://developers.google.com/protocol-buffers/",
+      "license": "3-Clause BSD License",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/protobuf-5.29.6/protobuf-5.29.6.dist-info__LICENSE"
+      ],
+      "name": "protobuf",
+      "purl": "pkg:pypi/protobuf@5.29.6",
+      "type": "library",
+      "version": "5.29.6"
+    },
+    {
+      "homepage": "https://github.com/pyasn1/pyasn1",
+      "license": "BSD-2-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pyasn1-0.6.4/pyasn1-0.6.4.dist-info__licenses__LICENSE.rst"
+      ],
+      "name": "pyasn1",
+      "purl": "pkg:pypi/pyasn1@0.6.4",
+      "type": "library",
+      "version": "0.6.4"
+    },
+    {
+      "homepage": "https://github.com/pyasn1/pyasn1-modules",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pyasn1-modules-0.4.2/pyasn1_modules-0.4.2.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "pyasn1_modules",
+      "purl": "pkg:pypi/pyasn1-modules@0.4.2",
+      "type": "library",
+      "version": "0.4.2"
+    },
+    {
+      "homepage": "https://github.com/eliben/pycparser",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pycparser-3.0/pycparser-3.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "pycparser",
+      "purl": "pkg:pypi/pycparser@3.0",
+      "type": "library",
+      "version": "3.0"
     },
     {
       "homepage": "https://github.com/pydantic/pydantic",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pydantic-2.13.4/LICENSE"
+        "THIRD_PARTY_LICENSES/pydantic-2.13.4/pydantic-2.13.4.dist-info__licenses__LICENSE"
       ],
       "name": "pydantic",
       "purl": "pkg:pypi/pydantic@2.13.4",
@@ -206,7 +999,7 @@
       "homepage": "https://github.com/pydantic/pydantic",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pydantic-core-2.46.4/LICENSE"
+        "THIRD_PARTY_LICENSES/pydantic-core-2.46.4/pydantic_core-2.46.4.dist-info__licenses__LICENSE"
       ],
       "name": "pydantic_core",
       "purl": "pkg:pypi/pydantic-core@2.46.4",
@@ -214,21 +1007,43 @@
       "version": "2.46.4"
     },
     {
-      "homepage": "https://pygments.org",
-      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/pydantic/pydantic-settings",
+      "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pygments-2.21.0/LICENSE"
+        "THIRD_PARTY_LICENSES/pydantic-settings-2.15.0/pydantic_settings-2.15.0.dist-info__licenses__LICENSE"
       ],
-      "name": "Pygments",
-      "purl": "pkg:pypi/pygments@2.21.0",
+      "name": "pydantic-settings",
+      "purl": "pkg:pypi/pydantic-settings@2.15.0",
       "type": "library",
-      "version": "2.21.0"
+      "version": "2.15.0"
+    },
+    {
+      "homepage": "http://pydub.com",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pydub-0.25.1/pydub-0.25.1.dist-info__LICENSE"
+      ],
+      "name": "pydub",
+      "purl": "pkg:pypi/pydub@0.25.1",
+      "type": "library",
+      "version": "0.25.1"
+    },
+    {
+      "homepage": "https://github.com/jfhbrook/pyee",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pyee-13.0.1/pyee-13.0.1.dist-info__licenses__LICENSE"
+      ],
+      "name": "pyee",
+      "purl": "pkg:pypi/pyee@13.0.1",
+      "type": "library",
+      "version": "13.0.1"
     },
     {
       "homepage": "https://pyinstaller.org",
       "license": "GPL-2.0-or-later WITH Bootloader-exception",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pyinstaller-6.21.0/COPYING.txt"
+        "THIRD_PARTY_LICENSES/pyinstaller-6.21.0/pyinstaller-6.21.0.dist-info__licenses__COPYING.txt"
       ],
       "name": "pyinstaller",
       "purl": "pkg:pypi/pyinstaller@6.21.0",
@@ -239,7 +1054,7 @@
       "homepage": "https://github.com/pyinstaller/pyinstaller-hooks-contrib",
       "license": "GPL-2.0-or-later AND Apache-2.0",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pyinstaller-hooks-contrib-2026.6/LICENSE"
+        "THIRD_PARTY_LICENSES/pyinstaller-hooks-contrib-2026.6/pyinstaller_hooks_contrib-2026.6.dist-info__licenses__LICENSE"
       ],
       "name": "pyinstaller-hooks-contrib",
       "purl": "pkg:pypi/pyinstaller-hooks-contrib@2026.6",
@@ -247,21 +1062,95 @@
       "version": "2026.6"
     },
     {
-      "homepage": "https://docs.pytest.org/en/stable/changelog.html",
+      "homepage": "https://github.com/jpadilla/pyjwt",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pytest-9.0.3/LICENSE"
+        "THIRD_PARTY_LICENSES/pyjwt-2.13.0/pyjwt-2.13.0.dist-info__licenses__AUTHORS.rst",
+        "THIRD_PARTY_LICENSES/pyjwt-2.13.0/pyjwt-2.13.0.dist-info__licenses__LICENSE"
       ],
-      "name": "pytest",
-      "purl": "pkg:pypi/pytest@9.0.3",
+      "name": "PyJWT",
+      "purl": "pkg:pypi/pyjwt@2.13.0",
       "type": "library",
-      "version": "9.0.3"
+      "version": "2.13.0"
+    },
+    {
+      "homepage": "https://pyparsing-docs.readthedocs.io/en/latest/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pyparsing-3.3.2/pyparsing-3.3.2.dist-info__licenses__LICENSE"
+      ],
+      "name": "pyparsing",
+      "purl": "pkg:pypi/pyparsing@3.3.2",
+      "type": "library",
+      "version": "3.3.2"
+    },
+    {
+      "homepage": "https://github.com/pypdfium2-team/pypdfium2",
+      "license": "BSD-3-Clause, Apache-2.0, dependency licenses",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__LICENSES__Apache-2.0.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__LICENSES__BSD-3-Clause.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__LICENSES__CC-BY-4.0.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__abseil.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__agg23.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__fast_float.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__freetype.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__icu.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__lcms.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__libjpeg_turbo.ijg",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__libjpeg_turbo.md",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__libopenjpeg.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__libpng.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__libtiff.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__llvm-libc.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__pdfium-binaries.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__pdfium.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__simdutf.txt",
+        "THIRD_PARTY_LICENSES/pypdfium2-5.13.0/pypdfium2-5.13.0.dist-info__licenses__data__windows_x64__BUILD_LICENSES__zlib.txt"
+      ],
+      "name": "pypdfium2",
+      "purl": "pkg:pypi/pypdfium2@5.13.0",
+      "type": "library",
+      "version": "5.13.0"
+    },
+    {
+      "homepage": "https://github.com/pyreadline3/pyreadline3",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pyreadline3-3.5.6/pyreadline3-3.5.6.dist-info__licenses__LICENSE.md"
+      ],
+      "name": "pyreadline3",
+      "purl": "pkg:pypi/pyreadline3@3.5.6",
+      "type": "library",
+      "version": "3.5.6"
+    },
+    {
+      "homepage": "https://github.com/deepbrook/Pysher",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pysher-1.0.8/pysher-1.0.8.dist-info__licenses__LICENSE"
+      ],
+      "name": "Pysher",
+      "purl": "pkg:pypi/pysher@1.0.8",
+      "type": "library",
+      "version": "1.0.8"
+    },
+    {
+      "homepage": "https://github.com/dateutil/dateutil",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/python-dateutil-2.9.0.post0/python_dateutil-2.9.0.post0.dist-info__LICENSE"
+      ],
+      "name": "python-dateutil",
+      "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "type": "library",
+      "version": "2.9.0.post0"
     },
     {
       "homepage": "https://github.com/theskumar/python-dotenv",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/python-dotenv-1.2.3/LICENSE"
+        "THIRD_PARTY_LICENSES/python-dotenv-1.2.3/python_dotenv-1.2.3.dist-info__licenses__LICENSE"
       ],
       "name": "python-dotenv",
       "purl": "pkg:pypi/python-dotenv@1.2.3",
@@ -269,10 +1158,68 @@
       "version": "1.2.3"
     },
     {
+      "homepage": "https://github.com/Kludex/python-multipart",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/python-multipart-0.0.32/python_multipart-0.0.32.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "python-multipart",
+      "purl": "pkg:pypi/python-multipart@0.0.32",
+      "type": "library",
+      "version": "0.0.32"
+    },
+    {
+      "homepage": "https://github.com/scanny/python-pptx/blob/master/HISTORY.rst",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/python-pptx-1.0.2/python_pptx-1.0.2.dist-info__LICENSE"
+      ],
+      "name": "python-pptx",
+      "purl": "pkg:pypi/python-pptx@1.0.2",
+      "type": "library",
+      "version": "1.0.2"
+    },
+    {
+      "homepage": "http://pythonhosted.org/pytz",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pytz-2026.3.post1/pytz-2026.3.post1.dist-info__LICENSE.txt"
+      ],
+      "name": "pytz",
+      "purl": "pkg:pypi/pytz@2026.3.post1",
+      "type": "library",
+      "version": "2026.3.post1"
+    },
+    {
+      "homepage": "https://github.com/mhammond/pywin32",
+      "license": "PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/pywin32-312/adodbapi__license.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pythonwin__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pythonwin__pywin__idle__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__adodbapi__license.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__com__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__com__win32comext__mapi__src__MAPIStubLibrary__LICENSE",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__isapi__README.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__pythonwin__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__pythonwin__Scintilla__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__pythonwin__pywin__idle__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/pywin32-312.dist-info__licenses__win32__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/win32__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/win32com__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/win32comext__License.txt",
+        "THIRD_PARTY_LICENSES/pywin32-312/win32comext__mapi__NOTICE.md"
+      ],
+      "name": "pywin32",
+      "purl": "pkg:pypi/pywin32@312",
+      "type": "library",
+      "version": "312"
+    },
+    {
       "homepage": "https://github.com/enthought/pywin32-ctypes",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pywin32-ctypes-0.2.3/LICENSE.txt"
+        "THIRD_PARTY_LICENSES/pywin32-ctypes-0.2.3/pywin32_ctypes-0.2.3.dist-info__LICENSE.txt"
       ],
       "name": "pywin32-ctypes",
       "purl": "pkg:pypi/pywin32-ctypes@0.2.3",
@@ -283,7 +1230,7 @@
       "homepage": "https://pyyaml.org/",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/pyyaml-6.0.3/LICENSE"
+        "THIRD_PARTY_LICENSES/pyyaml-6.0.3/pyyaml-6.0.3.dist-info__licenses__LICENSE"
       ],
       "name": "PyYAML",
       "purl": "pkg:pypi/pyyaml@6.0.3",
@@ -291,26 +1238,114 @@
       "version": "6.0.3"
     },
     {
+      "homepage": "https://referencing.readthedocs.io/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/referencing-0.37.0/referencing-0.37.0.dist-info__licenses__COPYING"
+      ],
+      "name": "referencing",
+      "purl": "pkg:pypi/referencing@0.37.0",
+      "type": "library",
+      "version": "0.37.0"
+    },
+    {
+      "homepage": "https://github.com/mrabarnett/mrab-regex",
+      "license": "Apache-2.0 AND CNRI-Python",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/regex-2026.7.19/regex-2026.7.19.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "regex",
+      "purl": "pkg:pypi/regex@2026.7.19",
+      "type": "library",
+      "version": "2026.7.19"
+    },
+    {
+      "homepage": "https://requests.readthedocs.io",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/requests-2.34.2/requests-2.34.2.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/requests-2.34.2/requests-2.34.2.dist-info__licenses__NOTICE"
+      ],
+      "name": "requests",
+      "purl": "pkg:pypi/requests@2.34.2",
+      "type": "library",
+      "version": "2.34.2"
+    },
+    {
+      "homepage": "https://rpds.readthedocs.io/",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/rpds-py-2026.6.3/rpds_py-2026.6.3.dist-info__licenses__LICENSE"
+      ],
+      "name": "rpds-py",
+      "purl": "pkg:pypi/rpds-py@2026.6.3",
+      "type": "library",
+      "version": "2026.6.3"
+    },
+    {
+      "homepage": "https://scikit-learn.org",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/scikit-learn-1.9.0/scikit_learn-1.9.0.dist-info__licenses__COPYING",
+        "THIRD_PARTY_LICENSES/scikit-learn-1.9.0/sklearn__externals__array_api_compat__LICENSE",
+        "THIRD_PARTY_LICENSES/scikit-learn-1.9.0/sklearn__externals__array_api_extra__LICENSE"
+      ],
+      "name": "scikit-learn",
+      "purl": "pkg:pypi/scikit-learn@1.9.0",
+      "type": "library",
+      "version": "1.9.0"
+    },
+    {
+      "homepage": "https://scipy.org/",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/scipy-1.18.0/scipy-1.18.0.dist-info__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/scipy-1.18.0/scipy___lib___uarray__LICENSE",
+        "THIRD_PARTY_LICENSES/scipy-1.18.0/scipy__fft___duccfft__LICENSE.md",
+        "THIRD_PARTY_LICENSES/scipy-1.18.0/scipy__integrate__LICENSE_DOP",
+        "THIRD_PARTY_LICENSES/scipy-1.18.0/scipy__spatial__qhull_src__COPYING_QHULL.txt"
+      ],
+      "name": "scipy",
+      "purl": "pkg:pypi/scipy@1.18.0",
+      "type": "library",
+      "version": "1.18.0"
+    },
+    {
+      "homepage": "http://seaborn.pydata.org",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/seaborn-0.13.2/seaborn-0.13.2.dist-info__LICENSE.md"
+      ],
+      "name": "seaborn",
+      "purl": "pkg:pypi/seaborn@0.13.2",
+      "type": "library",
+      "version": "0.13.2"
+    },
+    {
       "homepage": "https://github.com/pypa/setuptools",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE.APACHE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE.BSD",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE.txt",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/LICENSE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/NOTICE",
-        "THIRD_PARTY_LICENSES/setuptools-84.0.0/NOTICE"
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools-84.0.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__autocommand-2.2.2.dist-info__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__backports.tarfile-1.2.0.dist-info__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__importlib_metadata-8.7.1.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__jaraco.text-4.0.0.dist-info__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__jaraco_context-6.1.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__jaraco_functools-4.4.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__more_itertools-10.8.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging-26.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging-26.0.dist-info__licenses__LICENSE.APACHE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging-26.0.dist-info__licenses__LICENSE.BSD",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging__licenses____init__.py",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging__licenses____pycache______init__.cpython-313.pyc",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging__licenses____pycache_____spdx.cpython-313.pyc",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__packaging__licenses___spdx.py",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__platformdirs-4.4.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__tomli-2.4.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__wheel-0.46.3.dist-info__licenses__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools___vendor__zipp-3.23.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools__config__NOTICE",
+        "THIRD_PARTY_LICENSES/setuptools-84.0.0/setuptools__config___validate_pyproject__NOTICE"
       ],
       "name": "setuptools",
       "purl": "pkg:pypi/setuptools@84.0.0",
@@ -318,10 +1353,114 @@
       "version": "84.0.0"
     },
     {
+      "homepage": "https://github.com/benjaminp/six",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/six-1.17.0/six-1.17.0.dist-info__LICENSE"
+      ],
+      "name": "six",
+      "purl": "pkg:pypi/six@1.17.0",
+      "type": "library",
+      "version": "1.17.0"
+    },
+    {
+      "homepage": "https://github.com/python-trio/sniffio",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/sniffio-1.3.1/sniffio-1.3.1.dist-info__LICENSE",
+        "THIRD_PARTY_LICENSES/sniffio-1.3.1/sniffio-1.3.1.dist-info__LICENSE.APACHE2",
+        "THIRD_PARTY_LICENSES/sniffio-1.3.1/sniffio-1.3.1.dist-info__LICENSE.MIT"
+      ],
+      "name": "sniffio",
+      "purl": "pkg:pypi/sniffio@1.3.1",
+      "type": "library",
+      "version": "1.3.1"
+    },
+    {
+      "homepage": "https://github.com/facelessuser/soupsieve",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/soupsieve-2.9.2/soupsieve-2.9.2.dist-info__licenses__LICENSE.md"
+      ],
+      "name": "soupsieve",
+      "purl": "pkg:pypi/soupsieve@2.9.2",
+      "type": "library",
+      "version": "2.9.2"
+    },
+    {
+      "homepage": "https://github.com/Uberi/speech_recognition#readme",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/speechrecognition-3.17.0/speech_recognition__pocketsphinx-data__en-US__LICENSE.txt",
+        "THIRD_PARTY_LICENSES/speechrecognition-3.17.0/speechrecognition-3.17.0.dist-info__licenses__LICENSE-FLAC.txt",
+        "THIRD_PARTY_LICENSES/speechrecognition-3.17.0/speechrecognition-3.17.0.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "SpeechRecognition",
+      "purl": "pkg:pypi/speechrecognition@3.17.0",
+      "type": "library",
+      "version": "3.17.0"
+    },
+    {
+      "homepage": "https://www.sqlalchemy.org",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/sqlalchemy-2.0.52/sqlalchemy-2.0.52.dist-info__licenses__LICENSE"
+      ],
+      "name": "SQLAlchemy",
+      "purl": "pkg:pypi/sqlalchemy@2.0.52",
+      "type": "library",
+      "version": "2.0.52"
+    },
+    {
+      "homepage": "https://github.com/fastapi/sqlmodel",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/sqlmodel-0.0.39/sqlmodel-0.0.39.dist-info__licenses__LICENSE"
+      ],
+      "name": "sqlmodel",
+      "purl": "pkg:pypi/sqlmodel@0.0.39",
+      "type": "library",
+      "version": "0.0.39"
+    },
+    {
+      "homepage": "https://github.com/sysid/sse-starlette",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/sse-starlette-3.4.8/sse_starlette-3.4.8.dist-info__licenses__AUTHORS",
+        "THIRD_PARTY_LICENSES/sse-starlette-3.4.8/sse_starlette-3.4.8.dist-info__licenses__LICENSE"
+      ],
+      "name": "sse-starlette",
+      "purl": "pkg:pypi/sse-starlette@3.4.8",
+      "type": "library",
+      "version": "3.4.8"
+    },
+    {
+      "homepage": "https://github.com/youknowone/python-deadlib",
+      "license": "PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/standard-aifc-3.13.0/standard_aifc-3.13.0.dist-info__LICENSE"
+      ],
+      "name": "standard-aifc",
+      "purl": "pkg:pypi/standard-aifc@3.13.0",
+      "type": "library",
+      "version": "3.13.0"
+    },
+    {
+      "homepage": "https://github.com/youknowone/python-deadlib",
+      "license": "PSF-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/standard-chunk-3.13.0/standard_chunk-3.13.0.dist-info__LICENSE"
+      ],
+      "name": "standard-chunk",
+      "purl": "pkg:pypi/standard-chunk@3.13.0",
+      "type": "library",
+      "version": "3.13.0"
+    },
+    {
       "homepage": "https://github.com/Kludex/starlette",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/starlette-1.6.0/LICENSE.md"
+        "THIRD_PARTY_LICENSES/starlette-1.6.0/starlette-1.6.0.dist-info__licenses__LICENSE.md"
       ],
       "name": "starlette",
       "purl": "pkg:pypi/starlette@1.6.0",
@@ -329,10 +1468,67 @@
       "version": "1.6.0"
     },
     {
+      "homepage": "https://sympy.org",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/sympy-1.14.0/sympy-1.14.0.dist-info__licenses__AUTHORS",
+        "THIRD_PARTY_LICENSES/sympy-1.14.0/sympy-1.14.0.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/sympy-1.14.0/sympy__parsing__latex__LICENSE.txt"
+      ],
+      "name": "sympy",
+      "purl": "pkg:pypi/sympy@1.14.0",
+      "type": "library",
+      "version": "1.14.0"
+    },
+    {
+      "homepage": "https://github.com/jd/tenacity",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/tenacity-9.1.4/tenacity-9.1.4.dist-info__licenses__LICENSE"
+      ],
+      "name": "tenacity",
+      "purl": "pkg:pypi/tenacity@9.1.4",
+      "type": "library",
+      "version": "9.1.4"
+    },
+    {
+      "homepage": "https://github.com/joblib/threadpoolctl",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/threadpoolctl-3.6.0/threadpoolctl-3.6.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "threadpoolctl",
+      "purl": "pkg:pypi/threadpoolctl@3.6.0",
+      "type": "library",
+      "version": "3.6.0"
+    },
+    {
+      "homepage": "https://github.com/openai/tiktoken",
+      "license": "NOASSERTION",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/tiktoken-0.14.0/tiktoken-0.14.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "tiktoken",
+      "purl": "pkg:pypi/tiktoken@0.14.0",
+      "type": "library",
+      "version": "0.14.0"
+    },
+    {
+      "homepage": "https://tqdm.github.io",
+      "license": "MPL-2.0 AND MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/tqdm-4.70.0/tqdm-4.70.0.dist-info__licenses__LICENCE"
+      ],
+      "name": "tqdm",
+      "purl": "pkg:pypi/tqdm@4.70.0",
+      "type": "library",
+      "version": "4.70.0"
+    },
+    {
       "homepage": "https://github.com/python/typing_extensions/issues",
       "license": "PSF-2.0",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/typing-extensions-4.16.0/LICENSE"
+        "THIRD_PARTY_LICENSES/typing-extensions-4.16.0/typing_extensions-4.16.0.dist-info__licenses__LICENSE"
       ],
       "name": "typing_extensions",
       "purl": "pkg:pypi/typing-extensions@4.16.0",
@@ -343,7 +1539,7 @@
       "homepage": "https://github.com/pydantic/typing-inspection",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/typing-inspection-0.4.4/LICENSE"
+        "THIRD_PARTY_LICENSES/typing-inspection-0.4.4/typing_inspection-0.4.4.dist-info__licenses__LICENSE"
       ],
       "name": "typing-inspection",
       "purl": "pkg:pypi/typing-inspection@0.4.4",
@@ -351,10 +1547,33 @@
       "version": "0.4.4"
     },
     {
+      "homepage": "https://github.com/python/tzdata",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/tzdata-2026.3/tzdata-2026.3.dist-info__licenses__LICENSE",
+        "THIRD_PARTY_LICENSES/tzdata-2026.3/tzdata-2026.3.dist-info__licenses__licenses__LICENSE_APACHE"
+      ],
+      "name": "tzdata",
+      "purl": "pkg:pypi/tzdata@2026.3",
+      "type": "library",
+      "version": "2026.3"
+    },
+    {
+      "homepage": "https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/urllib3-2.7.0/urllib3-2.7.0.dist-info__licenses__LICENSE.txt"
+      ],
+      "name": "urllib3",
+      "purl": "pkg:pypi/urllib3@2.7.0",
+      "type": "library",
+      "version": "2.7.0"
+    },
+    {
       "homepage": "https://uvicorn.dev/release-notes",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/uvicorn-0.52.3/LICENSE.md"
+        "THIRD_PARTY_LICENSES/uvicorn-0.52.3/uvicorn-0.52.3.dist-info__licenses__LICENSE.md"
       ],
       "name": "uvicorn",
       "purl": "pkg:pypi/uvicorn@0.52.3",
@@ -365,7 +1584,7 @@
       "homepage": "https://github.com/samuelcolvin/watchfiles",
       "license": "MIT",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/watchfiles-1.2.0/LICENSE"
+        "THIRD_PARTY_LICENSES/watchfiles-1.2.0/watchfiles-1.2.0.dist-info__licenses__LICENSE"
       ],
       "name": "watchfiles",
       "purl": "pkg:pypi/watchfiles@1.2.0",
@@ -373,15 +1592,70 @@
       "version": "1.2.0"
     },
     {
+      "homepage": "https://github.com/websocket-client/websocket-client.git",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/websocket-client-1.9.0/websocket_client-1.9.0.dist-info__licenses__LICENSE"
+      ],
+      "name": "websocket-client",
+      "purl": "pkg:pypi/websocket-client@1.9.0",
+      "type": "library",
+      "version": "1.9.0"
+    },
+    {
       "homepage": "https://github.com/python-websockets/websockets",
       "license": "BSD-3-Clause",
       "licenseFiles": [
-        "THIRD_PARTY_LICENSES/websockets-17.0.1/LICENSE"
+        "THIRD_PARTY_LICENSES/websockets-16.1.1/websockets-16.1.1.dist-info__licenses__LICENSE"
       ],
       "name": "websockets",
-      "purl": "pkg:pypi/websockets@17.0.1",
+      "purl": "pkg:pypi/websockets@16.1.1",
       "type": "library",
-      "version": "17.0.1"
+      "version": "16.1.1"
+    },
+    {
+      "homepage": "https://github.com/Delgan/win32-setctime",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/win32-setctime-1.2.0/win32_setctime-1.2.0.dist-info__LICENSE"
+      ],
+      "name": "win32_setctime",
+      "purl": "pkg:pypi/win32-setctime@1.2.0",
+      "type": "library",
+      "version": "1.2.0"
+    },
+    {
+      "homepage": "http://www.python-excel.org/",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/xlrd-2.0.2/xlrd-2.0.2.dist-info__LICENSE"
+      ],
+      "name": "xlrd",
+      "purl": "pkg:pypi/xlrd@2.0.2",
+      "type": "library",
+      "version": "2.0.2"
+    },
+    {
+      "homepage": "https://github.com/jmcnamara/XlsxWriter",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/xlsxwriter-3.2.9/xlsxwriter-3.2.9.dist-info__LICENSE.txt"
+      ],
+      "name": "xlsxwriter",
+      "purl": "pkg:pypi/xlsxwriter@3.2.9",
+      "type": "library",
+      "version": "3.2.9"
+    },
+    {
+      "homepage": "https://github.com/jdepoix/youtube-transcript-api",
+      "license": "MIT",
+      "licenseFiles": [
+        "THIRD_PARTY_LICENSES/youtube-transcript-api-1.0.3/youtube_transcript_api-1.0.3.dist-info__LICENSE"
+      ],
+      "name": "youtube-transcript-api",
+      "purl": "pkg:pypi/youtube-transcript-api@1.0.3",
+      "type": "library",
+      "version": "1.0.3"
     },
     {
       "homepage": "https://www.python.org/",

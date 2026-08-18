@@ -1,69 +1,63 @@
-# Tutorial: Build Your First Local Campaign
+# Tutorial: Run the Full Promarkia Workspace Locally
 
-This walkthrough produces a private campaign package without a Promarkia account or public
-publishing action.
+## 1. Start the workspace
 
-## 1. Start Promarkia
+Use the Windows/macOS desktop release, `docker compose up --build`, or the Python installation steps in the README. Open `http://127.0.0.1:8788`.
 
-Use the Windows/macOS desktop release, or run from source:
+The sidebar should show General Chat plus 15 specialized squads. The footer identifies the workspace as local mode.
 
-```bash
-python -m venv .venv
-pip install -r requirements.lock
-pip install --no-deps -e .
-promarkia serve
-```
+## 2. Configure a model
 
-Open `http://127.0.0.1:8788`. The default mock provider is deterministic and requires no key.
+Open **API Keys**.
 
-## 2. Create the campaign
+Promarkia never bundles provider credentials. Add only the services you use;
+research and transportation tools can read `SERPER_API_KEY` and
+`FMCSA_WEB_KEY` from the same encrypted local vault.
 
-Enter:
+- For Ollama, use a tool-capable model such as `qwen2.5:7b-instruct` and `http://127.0.0.1:11434/v1` for a native install.
+- For Docker-to-host Ollama, use `http://host.docker.internal:11434/v1`.
+- For OpenAI, store `OPENAI_API_KEY` in the encrypted key panel.
+- For another compatible server, choose **OpenAI-compatible endpoint** and provide its model, base URL, and required key.
 
-- Company website: a public HTTP(S) company page
-- Campaign goal: one specific business outcome
-- Audience: the buyer or user segment
-- Offer: the action you want the audience to take
+Select **Test connection**, then **Save provider**.
 
-Choose **Build campaign**. The local worker researches the public page and creates research,
-positioning, landing-page copy, email, social, ad concepts, a content calendar, QA report, and
-receipt.
+## 3. Start a real squad conversation
 
-## 3. Review before approval
+Choose General Chat or any specialist squad. Conversations, agent messages, runs, and uploaded/generated files persist in the local data directory. The same multi-agent routing definitions used by the hosted core are bundled locally.
 
-Open every artifact and verify claims, names, links, offer details, compliance requirements, and
-brand voice. The receipt records the provider, model, stage timestamps, hashes, and the fact that
-nothing was published.
+## 4. Add integrations
 
-Choose **Approve drafts** only when the package is ready. Approval changes local state; it still
-does not post anything publicly.
+Open **Connect Integrations**. Add the provider name, a local account label, non-secret connection settings, and the secret values required by that provider. Credentials are encrypted locally and injected at run time.
 
-## 4. Use Ollama instead of the mock provider
+Some squad tools use Composio connection IDs; others accept provider-specific API credentials. Community does not create managed OAuth connections, so establish the account/connection with the provider first and enter its identifiers locally.
 
-```bash
-ollama pull llama3.1:8b
-```
+## 5. Add MCP servers
 
-macOS/Linux:
+Open **MCP Servers** and register either:
 
-```bash
-PROMARKIA_PROVIDER=ollama PROMARKIA_MODEL=llama3.1:8b promarkia serve
-```
+- a local stdio command with arguments and environment secrets, or
+- a Streamable HTTP endpoint with secret headers.
 
-Windows PowerShell:
+Enabled MCP workbenches are injected into each assistant at run time.
 
-```powershell
-$env:PROMARKIA_PROVIDER='ollama'
-$env:PROMARKIA_MODEL='llama3.1:8b'
-promarkia serve
-```
+## 6. Publish with approval
 
-Ollama stays on `127.0.0.1:11434` and requires no API key. For OpenAI, LM Studio, vLLM, or
-LocalAI, use the OpenAI-compatible configuration in the README.
+Ask a squad to send, publish, upload, or create an external resource. The first mutation attempt will stop and create an item under **Approvals**. Verify the redacted preview, approve it, and retry the same action. The approval is consumed after one matching execution.
 
-## 5. Find or remove local data
+Changing the payload or repeating the action requires a new approval. Reject requests you do not recognize.
 
-Source and Docker installs use `./data` unless `PROMARKIA_DATA_DIR` is set. Desktop releases use
-the operating system's local application-data directory. Removing that directory permanently
-removes local campaign history; back it up first if you need the artifacts.
+## 7. Schedule work
 
+Open **Scheduled Tasks**, choose a squad, enter the task, timezone, and recurrence, then save it. Local schedules run only while Promarkia is running. Publishing actions created by scheduled work still require approval when the schedule is configured that way.
+
+## 8. Use Launchpad and artifacts
+
+Launchpad provides starter workflows for campaigns, social content, email, SEO, ads, images, video, and lead generation. **My Artifacts** stores uploaded and generated files with hashes and local paths.
+
+## 9. Set a local cost guard
+
+In **API Keys**, enter your provider's input/output rates and configure the monthly warning threshold or hard cap. This is a local estimate based on recorded usage, not a provider invoice and not Promarkia credits.
+
+## 10. Back up or erase the workspace
+
+Stop Promarkia and copy the configured data directory to back it up. Delete that directory—or the Docker volume—to erase the complete local workspace after preserving anything you need.

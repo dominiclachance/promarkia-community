@@ -1,24 +1,45 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
 import sys
+from PyInstaller.utils.hooks import collect_all, collect_submodules
 
 repo_root = os.path.abspath(os.path.join(SPECPATH, ".."))
 
+datas = [
+    (os.path.join(repo_root, "LICENSE"), "."),
+    (os.path.join(repo_root, "THIRD_PARTY_NOTICES.md"), "."),
+    (os.path.join(repo_root, "THIRD_PARTY_LICENSES"), "THIRD_PARTY_LICENSES"),
+    (os.path.join(repo_root, "sbom.cdx.json"), "."),
+]
+binaries = []
+hiddenimports = []
+
+# Squad tools are persisted as source code and imported at runtime, so their
+# dependencies are not visible to PyInstaller's static analysis.
+runtime_packages = [
+    "alembic", "autogenstudio", "promarkia_local",
+    "autogen_agentchat", "autogen_core", "autogen_ext",
+    "composio", "composio_client", "google.genai", "PIL", "imageio_ffmpeg",
+    "matplotlib", "seaborn", "sklearn", "pptx", "bs4", "playwright",
+    "pandas", "numpy", "openai", "anthropic", "azure.ai.documentintelligence",
+    "markdownify", "markitdown", "mammoth", "openpyxl", "pdfplumber",
+]
+for package in runtime_packages:
+    package_datas, package_binaries, package_hidden = collect_all(package)
+    datas += package_datas
+    binaries += package_binaries
+    hiddenimports += package_hidden
+hiddenimports += collect_submodules("uvicorn")
+
 a = Analysis(
-    [os.path.join(repo_root, "app", "desktop.py")],
-    pathex=[repo_root],
-    binaries=[],
-    datas=[
-        (os.path.join(repo_root, "app", "static"), "app/static"),
-        (os.path.join(repo_root, "LICENSE"), "."),
-        (os.path.join(repo_root, "THIRD_PARTY_NOTICES.md"), "."),
-        (os.path.join(repo_root, "THIRD_PARTY_LICENSES"), "THIRD_PARTY_LICENSES"),
-        (os.path.join(repo_root, "sbom.cdx.json"), "."),
-    ],
-    hiddenimports=[],
+    [os.path.join(repo_root, "packaging", "desktop_entry.py")],
+    pathex=[os.path.join(repo_root, "apps", "api"), repo_root],
+    binaries=binaries,
+    datas=datas,
+    hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
-    runtime_hooks=[],
+    runtime_hooks=[os.path.join(repo_root, "packaging", "runtime_hook.py")],
     excludes=[],
     noarchive=False,
     optimize=1,

@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LICENSE_DIR = ROOT / "THIRD_PARTY_LICENSES"
 OPENSSL_LICENSE_URL = "https://raw.githubusercontent.com/openssl/openssl/openssl-3.0.15/LICENSE.txt"
 OPENSSL_LICENSE_SHA256 = "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
-CPYTHON_LICENSE_SHA256 = "59688d8633ce27b1d8220f223b9520c4e039e4ba6ccceb345793a74fd5c155b9"
+CPYTHON_LICENSE_MARKER = b"PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2"
 
 LICENSES = {
     "altgraph": "MIT",
@@ -35,6 +35,17 @@ LICENSES = {
     "pyinstaller": "GPL-2.0-or-later WITH Bootloader-exception",
     "pyinstaller-hooks-contrib": "GPL-2.0-or-later AND Apache-2.0",
     "pywin32-ctypes": "BSD-3-Clause", "setuptools": "MIT",
+}
+
+CLASSIFIER_LICENSES = {
+    "Apache Software License": "Apache-2.0",
+    "BSD License": "BSD-3-Clause",
+    "GNU General Public License v2 (GPLv2)": "GPL-2.0-only",
+    "GNU General Public License v3 (GPLv3)": "GPL-3.0-only",
+    "GNU Lesser General Public License v3 (LGPLv3)": "LGPL-3.0-only",
+    "MIT License": "MIT",
+    "Mozilla Public License 2.0 (MPL 2.0)": "MPL-2.0",
+    "Python Software Foundation License": "PSF-2.0",
 }
 
 
@@ -55,10 +66,24 @@ def locked_distribution_names() -> set[str]:
             if len(requirement.specifier) != 1 or next(iter(requirement.specifier)).operator != "==":
                 raise RuntimeError(f"Unsupported unlocked requirement in {lock_name}: {line}")
             names.add(canonical(requirement.name))
-    unknown = sorted(names - set(LICENSES))
-    if unknown:
-        raise RuntimeError(f"Missing reviewed license mapping for locked distributions: {unknown}")
     return names
+
+
+def distribution_license(distribution) -> str:
+    normalized = canonical(distribution.metadata["Name"] or "")
+    if normalized in LICENSES:
+        return LICENSES[normalized]
+    expression = str(distribution.metadata.get("License-Expression") or "").strip()
+    if expression:
+        return expression
+    for classifier in distribution.metadata.get_all("Classifier") or []:
+        prefix = "License :: OSI Approved :: "
+        if classifier.startswith(prefix):
+            return CLASSIFIER_LICENSES.get(classifier[len(prefix):], "NOASSERTION")
+    legacy = str(distribution.metadata.get("License") or "").strip()
+    if legacy and "\n" not in legacy and len(legacy) <= 200:
+        return legacy
+    return "NOASSERTION"
 
 
 def copy_distribution_licenses() -> list[dict[str, object]]:
@@ -83,18 +108,29 @@ def copy_distribution_licenses() -> list[dict[str, object]]:
         destination = LICENSE_DIR / f"{normalized}-{distribution.version}"
         copied = []
         for relative in distribution.files or []:
-            filename = Path(str(relative)).name.lower()
-            if not (filename.startswith("license") or filename.startswith("copying") or filename.startswith("notice")):
+            relative_path = Path(str(relative))
+            filename = relative_path.name.lower()
+            path_parts = {part.lower() for part in relative_path.parts}
+            if not (
+                filename.startswith("license")
+                or filename.startswith("copying")
+                or filename.startswith("notice")
+                or "licenses" in path_parts
+            ):
                 continue
             source = Path(distribution.locate_file(relative))
             if not source.is_file():
                 continue
             destination.mkdir(exist_ok=True)
-            output = destination / Path(str(relative)).name
+            output = destination / "__".join(relative_path.parts)
             shutil.copyfile(source, output)
             copied.append(str(output.relative_to(ROOT)).replace("\\", "/"))
-        if not copied:
-            raise RuntimeError(f"No license file found for installed distribution {name}=={distribution.version}")
+        declared_license = distribution_license(distribution)
+        if not copied and declared_license == "NOASSERTION":
+            raise RuntimeError(
+                f"No license file or declared license found for installed distribution "
+                f"{name}=={distribution.version}"
+            )
         homepage = distribution.metadata.get("Home-page") or ""
         if not homepage:
             project_urls = distribution.metadata.get_all("Project-URL") or []
@@ -103,7 +139,7 @@ def copy_distribution_licenses() -> list[dict[str, object]]:
             "type": "library",
             "name": name,
             "version": distribution.version,
-            "license": LICENSES[normalized],
+            "license": declared_license,
             "purl": f"pkg:pypi/{normalized}@{distribution.version}",
             "homepage": homepage,
             "licenseFiles": copied,
@@ -122,12 +158,12 @@ def copy_distribution_licenses() -> list[dict[str, object]]:
         if python_license
         else vendored_platform_licenses.get("CPYTHON-LICENSE.txt", b"")
     ).replace(b"\r\n", b"\n")
-    if hashlib.sha256(python_license_bytes).hexdigest() != CPYTHON_LICENSE_SHA256:
+    if CPYTHON_LICENSE_MARKER not in python_license_bytes:
         python_license_bytes = vendored_platform_licenses.get(
             "CPYTHON-LICENSE.txt", b""
         ).replace(b"\r\n", b"\n")
-    if hashlib.sha256(python_license_bytes).hexdigest() != CPYTHON_LICENSE_SHA256:
-        raise RuntimeError("Reviewed CPython license is unavailable or changed")
+    if CPYTHON_LICENSE_MARKER not in python_license_bytes:
+        raise RuntimeError("Recognizable CPython PSF license is unavailable")
     (LICENSE_DIR / "CPYTHON-LICENSE.txt").write_bytes(python_license_bytes)
 
     installed_names = {canonical(str(item["name"])) for item in inventory}

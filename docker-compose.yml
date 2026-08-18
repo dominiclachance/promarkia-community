@@ -8,9 +8,9 @@ services:
         required: false
     environment:
       PROMARKIA_HOST: 0.0.0.0
-      # Safe only because ports above publishes exclusively on host loopback.
       PROMARKIA_UNSAFE_ALLOW_NETWORK_BIND: "1"
       PROMARKIA_DATA_DIR: /data
+      PROMARKIA_NO_BROWSER: "1"
     volumes:
       - promarkia-data:/data
     restart: unless-stopped
