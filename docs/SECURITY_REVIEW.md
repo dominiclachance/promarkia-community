@@ -2,7 +2,7 @@
 
 **Target:** full local-parity branch
 **Deployment model:** one trusted owner, loopback-only
-**Status:** pass with platform-validation condition
+**Status:** pass; native platform validation complete
 
 ## Verified controls
 
@@ -35,10 +35,17 @@
 - `pip-audit`: zero known vulnerabilities in `requirements.lock`
 - Docker: pinned dependency image, non-root runtime, healthy API and complete UI QA
 - frozen Windows application: launched without a console, initialized SQLite/managers, and returned a healthy API response
+- Windows NSIS installer: silently installed to an isolated directory and passed the complete release-bundle audit
+- macOS application: launched on the pinned `macos-14` runner, initialized successfully, and returned a healthy API response
+- macOS DMG: created natively, mounted read-only, and passed the complete release-bundle audit
 - real Ollama `qwen2.5:7b-instruct` conversation: completed with persisted messages and usage receipt
 - built-in mutation classification: 21 actions covered by one-time approval/replay tests
 - release metadata: 144-component inventory, licenses, notices, and CycloneDX SBOM verified
 
-## Remaining platform condition
+## Native platform validation
 
-The macOS DMG must be built and smoke-tested by the pinned `macos-14` GitHub release job before publishing that asset. This is a platform-validation condition, not an application-security finding.
+GitHub Actions desktop run `32100186558` passed at commit
+`e0cfb4d33f87f470d0f12dcba6d1c08aac216792`. The Windows raw bundle and NSIS installer,
+plus the macOS application and read-only mounted DMG, all passed native launch, health, and
+release-bundle verification. No platform-validation condition remains for the unsigned
+`v0.1.0` preview release.
