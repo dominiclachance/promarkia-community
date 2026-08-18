@@ -46,12 +46,19 @@ class TeamManager:
 
     @staticmethod
     async def load_from_file(path: Union[str, Path]) -> Any:
-        """Load team configuration from JSON/YAML file"""
-        path = Path(path)
-        if not path.exists():
-            raise FileNotFoundError(f"Config file not found: {path}")
+        """Load an internal startup/runtime team configuration file.
 
-        async with aiofiles.open(path) as f:
+        Paths reach this helper only from trusted application settings or from
+        files enumerated by ``load_from_directory``; HTTP routes pass component
+        dictionaries instead of filesystem paths.
+        """
+        path = Path(path).expanduser().resolve()  # lgtm[py/path-injection]
+        if not path.exists():  # lgtm[py/path-injection]
+            raise FileNotFoundError(f"Config file not found: {path}")
+        if not path.is_file() or path.suffix.lower() not in {".json", ".yml", ".yaml"}:
+            raise ValueError(f"Unsupported config file: {path}")
+
+        async with aiofiles.open(path) as f:  # lgtm[py/path-injection]
             content = await f.read()
             if path.suffix == ".json":
                 return json.loads(content)

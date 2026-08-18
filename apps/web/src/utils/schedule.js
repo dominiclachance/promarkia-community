@@ -1,5 +1,6 @@
 import parser from 'cron-parser';
 import { addHours, addDays, addWeeks, isBefore } from 'date-fns';
+import { secureRandomInt } from './secureRandom';
 
 export const RECURRENCE = {
   ONCE: 'once',
@@ -56,7 +57,7 @@ export const computeRandomRun = (task, nowInput = new Date()) => {
   return next;
 };
 
-const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const randomInt = (min, max) => secureRandomInt(min, max + 1);
 
 export const serializeRecurrence = (form) => {
   switch (form.type) {

@@ -2,6 +2,7 @@ import { serializeRecurrence, computeNextRun } from '../utils/schedule';
 import { autogenBridgeFetch, getAutogenWebSocketUrl } from '../services/autogenBridge';
 import { auth } from '../firebase/authClient';
 import { localClient } from '../services/localClient';
+import { secureRandomInt } from '../utils/secureRandom';
 
 const getAuth = () => auth;
 
@@ -21,7 +22,7 @@ const user_id = 'guestuser@gmail.com'; // Hard-coded for testing
 // Ensure session_id is numeric.
 let session_id = sessionStorage.getItem('session_id');
 if (!session_id) {
-  session_id = Math.floor(Math.random() * 100);
+  session_id = secureRandomInt(1, 101);
   sessionStorage.setItem('session_id', session_id.toString());
   console.log("Generated new session_id:", session_id);
 } else {
@@ -214,7 +215,7 @@ export const chatStore = (set, get) => {
         fetchedRouterConfig;
 
       // Create a dedicated routing session so it does not interfere with the main chat session.
-      const routingSessionId = Math.floor(Math.random() * 1000000);
+      const routingSessionId = secureRandomInt(1, 1000000);
       const routingSessionPayload = {
         id: routingSessionId,
         user_id: user_id,

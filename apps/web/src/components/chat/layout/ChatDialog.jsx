@@ -38,6 +38,7 @@ import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import CloseIcon from '@mui/icons-material/Close';
 import { auth, db } from '../../../firebase/client';
 import { autogenBridgeFetch, getAutogenWebSocketUrl } from '../../../services/autogenBridge';
+import { secureRandomInt } from '../../../utils/secureRandom';
 // import CampaignIcon from '@mui/icons-material/Campaign'; // removed — was only used by SweetAlert task modal
 import { Typography, useTheme } from '@mui/material';
 import Divider from '@mui/material/Divider'; // Add this import
@@ -507,7 +508,7 @@ function CustomizedInputBase({ storeuid }) {
 
   // --- enhance flow ---
   const runEnhancePrompt = useCallback(async (promptText) => {
-    const sessionId = Math.floor(Math.random() * 1_000_000);
+    const sessionId = secureRandomInt(1, 1_000_000);
     const userEmail = 'guestuser@gmail.com';
     const sessionnameEmail = sessionStorage.getItem('email');
 

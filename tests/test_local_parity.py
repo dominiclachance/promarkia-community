@@ -3,11 +3,13 @@ import json
 from pathlib import Path
 
 import pytest
+from fastapi import HTTPException
 from sqlmodel import Session, SQLModel, create_engine, select
 
 from promarkia_local.approval_guard import ApprovalRequired, require_approval
 from promarkia_local.catalog import SQUADS
 from promarkia_local.models import LocalApproval, LocalMcpServer, LocalProfile, LocalSecret
+from promarkia_local.router import _validated_provider_target
 from promarkia_local.runtime import MUTATING_TOOLS, prepare_team_config
 from promarkia_local.vault import LocalVault
 from scripts.sanitize_team_export import SOURCE_SECRET_ASSIGNMENT, SOURCE_SERPER_HEADER
@@ -17,6 +19,29 @@ class FakeDb:
     def __init__(self):
         self.engine = create_engine("sqlite://", connect_args={"check_same_thread": False})
         SQLModel.metadata.create_all(self.engine)
+
+
+def test_provider_target_validation_blocks_unsafe_network_targets(monkeypatch):
+    def resolve(hostname, _port, **_kwargs):
+        addresses = {
+            "api.openai.com": "104.18.7.192",
+            "localhost": "127.0.0.1",
+            "metadata.test": "169.254.169.254",
+            "model.lan": "192.168.1.25",
+        }
+        return [(2, 1, 6, "", (addresses[hostname], 0))]
+
+    monkeypatch.setattr("promarkia_local.router.socket.getaddrinfo", resolve)
+
+    assert _validated_provider_target("openai", "https://api.openai.com/v1/models").startswith("https://")
+    assert _validated_provider_target("ollama", "http://localhost:11434/api/tags").startswith("http://")
+    assert _validated_provider_target("openai-compatible", "https://model.lan/v1/models").startswith("https://")
+    with pytest.raises(HTTPException, match="OpenAI must use"):
+        _validated_provider_target("openai", "https://example.com/v1/models")
+    with pytest.raises(HTTPException, match="loopback"):
+        _validated_provider_target("ollama", "http://model.lan:11434/api/tags")
+    with pytest.raises(HTTPException, match="prohibited"):
+        _validated_provider_target("openai-compatible", "http://metadata.test/latest/meta-data")
 
 
 def test_full_catalog_contains_general_chat_and_fifteen_squads():
